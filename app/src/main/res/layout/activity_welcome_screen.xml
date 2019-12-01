@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".WelcomeScreen">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="150dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Leading you to better health..."
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/getstarted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Get Started"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+</LinearLayout>
