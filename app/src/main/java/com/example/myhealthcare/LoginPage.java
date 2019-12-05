@@ -2,13 +2,17 @@ package com.example.myhealthcare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class LoginPage extends AppCompatActivity implements View.OnClickListener {
+public class LoginPage extends AppCompatActivity {
 
     EditText username, password;
     TextView forgotpassword, createacc;
@@ -23,22 +27,17 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
 
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
-        forgotpassword = findViewById(R.id.forgotPassword);
+        forgotpassword = findViewById(R.id.resetPw);
         createacc = findViewById(R.id.createacc);
         btnlogin = findViewById(R.id.btnlogin);
 
-        forgotpassword.setOnClickListener(this);
-        createacc.setOnClickListener(this);
-        btnlogin.setOnClickListener(this);
+        createacc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(LoginPage.this, RegistrationPage.class);
+                startActivity(myIntent);
+            }
+        });
     }
 
-    @Override
-    public void onClick(View v) {
-
-    }
-
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
 }
