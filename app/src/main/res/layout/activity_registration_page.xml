@@ -37,6 +37,7 @@
                     android:drawableStart="@drawable/userpicture"
                     android:drawableLeft="@drawable/userpicture"
                     android:drawablePadding="10dp"
+                    android:drawableTint="@color/colorPrimary"
                     android:hint="Full Name"
                     android:padding="15dp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -54,6 +55,7 @@
                     android:drawableStart="@drawable/user"
                     android:drawableLeft="@drawable/user"
                     android:drawablePadding="10dp"
+                    android:drawableTint="@color/colorPrimary"
                     android:hint="Username"
                     android:padding="15dp" />
 
@@ -72,6 +74,7 @@
                     android:drawableStart="@drawable/email"
                     android:drawableLeft="@drawable/email"
                     android:drawablePadding="10dp"
+                    android:drawableTint="@color/colorPrimary"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:padding="15dp" />
@@ -92,6 +95,7 @@
                     android:drawableStart="@drawable/lock"
                     android:drawableLeft="@drawable/lock"
                     android:drawablePadding="10dp"
+                    android:drawableTint="@color/colorPrimary"
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:padding="15dp" />
@@ -112,6 +116,7 @@
                     android:drawableStart="@drawable/lock"
                     android:drawableLeft="@drawable/lock"
                     android:drawablePadding="10dp"
+                    android:drawableTint="@color/colorPrimary"
                     android:hint="Re-type Password"
                     android:inputType="textPassword"
                     android:padding="15dp" />

@@ -9,7 +9,7 @@
     </style>
 
     <style name="text">
-        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:fontFamily">@font/centurygothic</item>
         <item name="android:textSize">20dp</item>
     </style>
@@ -21,10 +21,10 @@
     </style>
 
     <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <item name="boxStrokeColor">#000000</item>
+        <item name="boxStrokeColor">@color/colorPrimary</item>
         <item name="android:fontFamily">@font/centurygothic</item>
         <item name="boxStrokeWidth">2dp</item>
-        <item name="android:textColorHint">@color/colorText</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
     </style>
 
 </resources>

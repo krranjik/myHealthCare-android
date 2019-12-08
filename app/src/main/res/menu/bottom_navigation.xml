@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_prescription"
+        android:checkable="true"
+        android:icon="@drawable/prescription"
+        android:iconTintMode="src_atop"
+        android:iconTint="@color/colorWhite"
+        android:title="Prescription" />
+
+    <item
+        android:id="@+id/nav_appoint"
+        android:checkable="true"
+        android:title="Appointment" />
+
+    <item
+        android:id="@+id/nav_report"
+        android:checkable="true"
+        android:title="Report" />
+
+</menu>
