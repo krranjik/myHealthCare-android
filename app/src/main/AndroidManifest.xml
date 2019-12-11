@@ -16,12 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashScreen" />
-        <activity android:name=".RegistrationPage" />
-        <activity android:name=".LoginPage">
+        <activity android:name=".SplashScreen">
 
         </activity>
-        <activity android:name=".WelcomeScreen" />
+        <activity android:name=".RegistrationPage" />
+        <activity android:name=".LoginPage"></activity>
+        <activity android:name=".WelcomeScreen">
+
+        </activity>
     </application>
 
 </manifest>

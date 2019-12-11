@@ -39,13 +39,13 @@ public class LoginPage extends AppCompatActivity {
             }
         });
 
-//        btnlogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent myIntent = new Intent(LoginPage.this, Dashboard.class);
-//                startActivity(myIntent);
-//            }
-//        });
+        btnlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(LoginPage.this, Dashboard.class);
+                startActivity(myIntent);
+            }
+        });
     }
 
 }
