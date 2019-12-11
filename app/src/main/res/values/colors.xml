@@ -6,4 +6,5 @@
     <color name="colorButton">#FFF</color>
     <color name="colorWhite">#FFF</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#4b7bec</color>
+    <color name="colorWhiteTrans">#80ffffff</color>
 </resources>
