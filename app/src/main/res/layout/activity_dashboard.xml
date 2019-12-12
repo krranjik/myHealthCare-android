@@ -21,7 +21,6 @@
             android:id="@+id/main_nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:background="@color/colorPrimary"
             app:itemIconTint="@color/nav_item_colors"

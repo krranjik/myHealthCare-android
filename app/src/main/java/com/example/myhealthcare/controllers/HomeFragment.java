@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.myhealthcare.R;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
@@ -35,11 +36,12 @@ public class HomeFragment extends Fragment {
         root = inflater.inflate(R.layout.fragment_home, container, false);
 
         Calendar calendar = Calendar.getInstance();
-        String date = DateFormat.getDateInstance(DateFormat.DATE_FIELD).format(calendar.getTime());
-        String month = DateFormat.getDateInstance(DateFormat.MONTH_FIELD).format(calendar.getTime());
+        SimpleDateFormat month_date = new SimpleDateFormat("MMMM");
+        int date = calendar.get(Calendar.DAY_OF_MONTH);
+        String month =month_date.format(calendar.getTime());
 
         TextView textViewDate = root.findViewById(R.id.view_date);
-        textViewDate.setText(date);
+        textViewDate.setText(String.valueOf(date));
 
         TextView textViewMonth = root.findViewById(R.id.view_month);
         textViewMonth.setText(month);
