@@ -1,4 +1,4 @@
-package com.example.myhealthcare;
+package com.example.myhealthcare.controllers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import com.example.myhealthcare.R;
 
 public class WelcomeScreen extends AppCompatActivity implements View.OnClickListener {
 

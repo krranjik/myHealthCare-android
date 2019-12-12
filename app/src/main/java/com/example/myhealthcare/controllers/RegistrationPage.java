@@ -1,4 +1,4 @@
-package com.example.myhealthcare;
+package com.example.myhealthcare.controllers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.myhealthcare.R;
 
 public class RegistrationPage extends AppCompatActivity {
     EditText fullname, email, username, password, repassword;

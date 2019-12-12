@@ -1,4 +1,4 @@
-package com.example.myhealthcare;
+package com.example.myhealthcare.controllers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,12 +6,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
-import android.widget.Toolbar;
 
+import com.example.myhealthcare.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Dashboard extends AppCompatActivity {

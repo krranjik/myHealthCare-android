@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/menu_prescription"
-            android:icon="@drawable/prescription"
-            android:title="@string/menu_prescription" />
+    <item
+        android:id="@+id/menu_prescription"
+        android:icon="@drawable/prescription"
+        android:title="@string/menu_prescription" />
 
-        <item
-            android:id="@+id/menu_appointment"
-            android:icon="@drawable/appointment"
-            android:title="@string/menu_appointment" />
+    <item
+        android:id="@+id/menu_appointment"
+        android:icon="@drawable/appointment"
+        android:title="@string/menu_appointment" />
 
-        <item
-            android:id="@+id/menu_report"
-            android:icon="@drawable/report"
-            android:title="@string/menu_report" />
+    <item
+        android:id="@+id/menu_report"
+        android:icon="@drawable/report"
+        android:title="@string/menu_report" />
 
-        <item
-            android:id="@+id/menu_doctor"
-            android:icon="@drawable/doctor"
-            android:title="@string/menu_doctor" />
-    </group>
+    <item
+        android:id="@+id/menu_doctor"
+        android:icon="@drawable/doctor"
+        android:title="@string/menu_doctor" />
+
 </menu>

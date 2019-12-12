@@ -1,4 +1,4 @@
-package com.example.myhealthcare;
+package com.example.myhealthcare.controllers;
 
 
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.myhealthcare.R;
 
 import java.text.DateFormat;
 import java.util.Calendar;
