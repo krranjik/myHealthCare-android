@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.myhealthcare.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -97,6 +98,30 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+        switch (menuItem.getItemId()){
+            case R.id.menu_prescription:
+                Toast.makeText(this, "Prescription", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+
+        switch (menuItem.getItemId()){
+            case R.id.menu_appointment:
+                Toast.makeText(this, "Appointment", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+
+        switch (menuItem.getItemId()){
+            case R.id.menu_report:
+                Toast.makeText(this, "Report", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+
+        switch (menuItem.getItemId()){
+            case R.id.menu_doctor:
+                Toast.makeText(this, "Doctor", Toast.LENGTH_SHORT).show();
+                return true;
+        }
         return false;
     }
 }
