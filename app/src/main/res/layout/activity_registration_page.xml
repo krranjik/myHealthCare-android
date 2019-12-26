@@ -31,7 +31,7 @@
 
                 <EditText
                     android:id="@+id/fullname"
-                    style="@style/text"
+                    style="@style/text20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/userpicture"
@@ -49,7 +49,7 @@
 
                 <EditText
                     android:id="@+id/username"
-                    style="@style/text"
+                    style="@style/text20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/user"
@@ -68,7 +68,7 @@
 
                 <EditText
                     android:id="@+id/email"
-                    style="@style/text"
+                    style="@style/text20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/email"
@@ -89,7 +89,7 @@
 
                 <EditText
                     android:id="@+id/password"
-                    style="@style/text"
+                    style="@style/text20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/lock"
@@ -110,7 +110,7 @@
 
                 <EditText
                     android:id="@+id/repassword"
-                    style="@style/text"
+                    style="@style/text20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/lock"
@@ -124,7 +124,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                style="@style/text"
+                style="@style/text20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"

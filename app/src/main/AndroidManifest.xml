@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".controllers.Report"></activity>
+        <activity android:name=".controllers.Appointment" />
+        <activity android:name=".controllers.Prescription" />
         <activity android:name=".controllers.Dashboard">
 
         </activity>
@@ -20,10 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".controllers.RegistrationPage" />
-        <activity android:name=".controllers.LoginPage"></activity>
-        <activity android:name=".controllers.WelcomeScreen">
-
-        </activity>
+        <activity android:name=".controllers.LoginPage" />
+        <activity android:name=".controllers.WelcomeScreen" />
     </application>
 
 </manifest>

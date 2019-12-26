@@ -8,9 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="text">
+    <style name="text20">
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:fontFamily">@font/centurygothic</item>
+<!--        <item name="android:fontFamily">@font/centurygothic</item>-->
         <item name="android:textSize">20dp</item>
     </style>
 
@@ -20,23 +20,29 @@
         <item name="android:textColor">#FFF</item>
     </style>
 
-    <style name="text1">
+    <style name="text30">
         <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:fontFamily">@font/centurygothic</item>
+<!--        <item name="android:fontFamily">@font/centurygothic</item>-->
         <item name="android:textSize">30dp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxStrokeColor">@color/colorPrimary</item>
-        <item name="android:fontFamily">@font/centurygothic</item>
+<!--        <item name="android:fontFamily">@font/centurygothic</item>-->
         <item name="boxStrokeWidth">2dp</item>
         <item name="android:textColorHint">@color/colorPrimary</item>
     </style>
 
-    <style name="blackText">
+    <style name="blackText20">
         <item name="android:textColor">@color/colorBlack</item>
-        <item name="android:textSize">18dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="blackText25">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">25dp</item>
         <item name="android:textStyle">bold</item>
     </style>
 

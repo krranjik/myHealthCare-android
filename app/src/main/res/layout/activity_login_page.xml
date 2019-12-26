@@ -31,7 +31,7 @@
 
                 <EditText
                     android:id="@+id/username"
-                    style="@style/text"
+                    style="@style/text20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/user"
@@ -51,7 +51,7 @@
 
                 <EditText
                     android:id="@+id/password"
-                    style="@style/text"
+                    style="@style/text20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/lock"
@@ -66,7 +66,7 @@
 
             <CheckBox
                 android:id="@+id/rememberMe"
-                style="@style/text"
+                style="@style/text20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -96,7 +96,7 @@
 
                 <TextView
                     android:id="@+id/resetPw"
-                    style="@style/text"
+                    style="@style/text20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -104,7 +104,7 @@
                     android:text="Reset Password" />
 
                 <TextView
-                    style="@style/text"
+                    style="@style/text20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -112,7 +112,7 @@
 
                 <TextView
                     android:id="@+id/createacc"
-                    style="@style/text"
+                    style="@style/text20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"

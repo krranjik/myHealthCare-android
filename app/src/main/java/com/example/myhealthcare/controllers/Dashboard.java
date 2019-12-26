@@ -8,6 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -99,25 +100,28 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-        switch (menuItem.getItemId()){
+        switch (menuItem.getItemId()) {
             case R.id.menu_prescription:
-                Toast.makeText(this, "Prescription", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Dashboard.this, Prescription.class);
+                startActivity(intent);
                 return true;
         }
 
-        switch (menuItem.getItemId()){
+        switch (menuItem.getItemId()) {
             case R.id.menu_appointment:
-                Toast.makeText(this, "Appointment", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Dashboard.this, Appointment.class);
+                startActivity(intent);
                 return true;
         }
 
-        switch (menuItem.getItemId()){
+        switch (menuItem.getItemId()) {
             case R.id.menu_report:
-                Toast.makeText(this, "Report", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Dashboard.this, Report.class);
+                startActivity(intent);
                 return true;
         }
 
-        switch (menuItem.getItemId()){
+        switch (menuItem.getItemId()) {
             case R.id.menu_doctor:
                 Toast.makeText(this, "Doctor", Toast.LENGTH_SHORT).show();
                 return true;

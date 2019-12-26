@@ -17,7 +17,7 @@
             android:src="@drawable/user" />
 
         <TextView
-            style="@style/text1"
+            style="@style/text30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Kritik Ranjit" />
