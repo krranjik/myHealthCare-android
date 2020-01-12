@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.example.myhealthcare.R;
 
-public class Prescription extends AppCompatActivity {
+public class Doctor extends AppCompatActivity {
 
     TextView title;
     ImageView backbtn;
@@ -18,15 +18,15 @@ public class Prescription extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prescription);
+        setContentView(R.layout.activity_doctor);
 
         title = findViewById(R.id.menu_title_holder);
         backbtn = findViewById(R.id.back);
-        title.setText("Prescription");
+        title.setText("Doctor");
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Prescription.this, Dashboard.class);
+                Intent intent = new Intent(Doctor.this, Dashboard.class);
                 startActivity(intent);
             }
         });

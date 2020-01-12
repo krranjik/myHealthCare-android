@@ -3,6 +3,7 @@ package com.example.myhealthcare.controllers;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myhealthcare.R;
@@ -29,6 +31,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     private HomeFragment homeFragment;
     private NotificationFragment notificationFragment;
     private SettingsFragment settingsFragment;
+//    CardView tvPres;
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
@@ -43,6 +46,14 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         drawerLayout = findViewById(R.id.drawlayout);
         NavigationView navigationView = findViewById(R.id.menu_nav);
         ImageButton menubutton = findViewById(R.id.menubar);
+//        tvPres = findViewById(R.id.cvprescription);
+//        tvPres.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Dashboard.this, Prescription.class);
+//                startActivity(intent);
+//            }
+//        });
 
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -123,7 +134,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         switch (menuItem.getItemId()) {
             case R.id.menu_doctor:
-                Toast.makeText(this, "Doctor", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Dashboard.this, Doctor.class);
+                startActivity(intent);
                 return true;
         }
         return false;

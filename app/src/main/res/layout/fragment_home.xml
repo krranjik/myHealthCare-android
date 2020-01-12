@@ -66,6 +66,7 @@
             <!-- Column 1 -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvprescription"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -90,7 +91,7 @@
                         android:src="@drawable/prescription" />
 
                     <TextView
-                        style="@style/blackText20"
+                        style="@style/blackText17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Prescription"
@@ -127,7 +128,7 @@
                         android:src="@drawable/report" />
 
                     <TextView
-                        style="@style/blackText20"
+                        style="@style/blackText17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Reports"
@@ -166,7 +167,7 @@
                         android:src="@drawable/appointment" />
 
                     <TextView
-                        style="@style/blackText20"
+                        style="@style/blackText17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Appointment"
@@ -203,7 +204,7 @@
                         android:src="@drawable/doctor" />
 
                     <TextView
-                        style="@style/blackText20"
+                        style="@style/blackText17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Doctors"

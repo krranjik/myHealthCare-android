@@ -25,8 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:gravity="center"
-        android:text='"Leading you to better health..."'
-        android:textSize="24dp" />
+        android:text='"Leading you to better health..."' />
 
     <Button
         android:id="@+id/getstarted"
@@ -35,7 +34,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="240dp"
         android:background="@drawable/btnstyle"
-        android:fontFamily="@font/centurygothic"
         android:text="GET STARTED"
         android:textColor="#FFF"
         android:textSize="25dp"

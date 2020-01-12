@@ -12,12 +12,14 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:src="@drawable/user" />
 
         <TextView
             style="@style/text30"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Kritik Ranjit" />

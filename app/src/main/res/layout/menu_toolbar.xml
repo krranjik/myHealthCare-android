@@ -18,8 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:backgroundTint="@color/colorWhite"
-            android:background="@drawable/backbtn" />
+            android:background="@drawable/backbtn"
+            android:backgroundTint="@color/colorWhite" />
 
         <TextView
             android:id="@+id/menu_title_holder"
@@ -29,7 +29,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/back"
-            android:text="TITLE" />
+            android:text="Title" />
 
     </RelativeLayout>
 
