@@ -31,7 +31,6 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     private HomeFragment homeFragment;
     private NotificationFragment notificationFragment;
     private SettingsFragment settingsFragment;
-//    CardView tvPres;
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
@@ -46,14 +45,6 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         drawerLayout = findViewById(R.id.drawlayout);
         NavigationView navigationView = findViewById(R.id.menu_nav);
         ImageButton menubutton = findViewById(R.id.menubar);
-//        tvPres = findViewById(R.id.cvprescription);
-//        tvPres.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Dashboard.this, Prescription.class);
-//                startActivity(intent);
-//            }
-//        });
 
         navigationView.setNavigationItemSelectedListener(this);
 
