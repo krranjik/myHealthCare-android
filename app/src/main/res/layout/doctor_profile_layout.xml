@@ -9,83 +9,128 @@
         android:id="@+id/menu_toolbar"
         layout="@layout/menu_toolbar" />
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:background="@drawable/doctorprofileback"
-        android:gravity="bottom">
+        android:layout_height="match_parent">
 
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/profile"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="5dp" />
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7"
-        android:orientation="vertical"
-        android:padding="30dp">
-
-        <TextView
-            style="@style/text20"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Name:" />
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@drawable/doctorprofileback"
+            android:gravity="bottom">
 
-        <TextView
-            android:id="@+id/doctorname"
-            style="@style/blackText20"
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/kritik"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kritik Ranjit" />
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="vertical">
 
-        <TextView
-            style="@style/text20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hospital:" />
+            <TextView
+                style="@style/blacktext30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingTop="30dp"
+                android:text="Dr. Kritik Ranjit" />
 
-        <TextView
-            android:id="@+id/doctorhospital"
-            style="@style/blackText20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Norvic International Hospital" />
+            <TextView
+                style="@style/graytext25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingBottom="25dp"
+                android:text="Dermatologists" />
 
-        <TextView
-            style="@style/text20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Emergency Contact:" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorLine" />
 
-        <TextView
-            android:id="@+id/doctorphone"
-            style="@style/blackText20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="+977 9860841830" />
+            <TextView
+                style="@style/blackText20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="Dr. Kritik Ranjit is a good Dermatologist." />
 
-        <TextView
-            style="@style/text20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Specialist:" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorLine" />
 
-        <TextView
-            android:id="@+id/doctorspecialist"
-            style="@style/blackText20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Heart" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        style="@style/blackText25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location" />
+
+                    <TextView
+                        style="@style/blackText20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chagal, Tahachal" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorLine" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        style="@style/blackText25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rating" />
+
+                    <RatingBar
+                        style="?android:attr/ratingBarStyleIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:rating="4.5" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorLine" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

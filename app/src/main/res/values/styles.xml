@@ -8,9 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="text20">
+    <style name="bluetext20">
         <item name="android:textColor">@color/colorPrimary</item>
-<!--        <item name="android:fontFamily">@font/centurygothic</item>-->
         <item name="android:textSize">20dp</item>
     </style>
 
@@ -20,16 +19,26 @@
         <item name="android:textColor">#FFF</item>
     </style>
 
-    <style name="text30">
+    <style name="whitetext30">
         <item name="android:textColor">@color/colorWhite</item>
-<!--        <item name="android:fontFamily">@font/centurygothic</item>-->
         <item name="android:textSize">30dp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="blacktext30">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="graytext25">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">25dp</item>
+<!--        <item name="android:textStyle">bold</item>-->
+    </style>
+
     <style name="whitetext25">
         <item name="android:textColor">@color/colorWhite</item>
-        <!--        <item name="android:fontFamily">@font/centurygothic</item>-->
         <item name="android:textSize">25dp</item>
         <item name="android:textStyle">bold</item>
     </style>

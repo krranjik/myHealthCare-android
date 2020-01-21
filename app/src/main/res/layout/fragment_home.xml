@@ -23,7 +23,7 @@
 
             <TextView
                 android:id="@+id/view_date"
-                style="@style/text30"
+                style="@style/whitetext30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -32,7 +32,7 @@
 
             <TextView
                 android:id="@+id/view_month"
-                style="@style/text30"
+                style="@style/whitetext30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/view_date"
@@ -40,7 +40,7 @@
                 android:text="Month" />
 
             <TextView
-                style="@style/text30"
+                style="@style/whitetext30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/view_month"

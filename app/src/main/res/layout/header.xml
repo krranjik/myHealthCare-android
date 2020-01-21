@@ -11,17 +11,21 @@
         android:layout_margin="10dp"
         android:orientation="vertical">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/user" />
+            android:src="@drawable/kritik"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
 
         <TextView
-            style="@style/text30"
-            android:gravity="center"
+            style="@style/whitetext30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="Kritik Ranjit" />
 
     </LinearLayout>
