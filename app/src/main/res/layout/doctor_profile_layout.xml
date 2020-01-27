@@ -5,13 +5,13 @@
     android:orientation="vertical"
     android:weightSum="10">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <include
+        android:id="@+id/menu_toolbar"
+        layout="@layout/menu_toolbar" />
 
-        <include
-            android:id="@+id/menu_toolbar"
-            layout="@layout/menu_toolbar" />
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -146,6 +146,6 @@
 
         </LinearLayout>
 
-    </ScrollView>
+<!--    </ScrollView>-->
 
 </LinearLayout>
