@@ -21,7 +21,7 @@
 
         <TextView
             android:id="@+id/title"
-            style="@style/bluetext20"
+            style="@style/whitetext25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -29,8 +29,6 @@
             android:layout_toRightOf="@+id/menubar"
             android:gravity="center"
             android:text="myHealth Care"
-            android:textColor="@color/colorWhite"
-            android:textSize="25dp"
             android:textStyle="bold" />
 
     </RelativeLayout>

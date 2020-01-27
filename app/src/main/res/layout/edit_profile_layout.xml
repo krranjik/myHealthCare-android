@@ -17,7 +17,8 @@
             android:layout_centerVertical="true"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:src="@drawable/backbtn" />
+            android:src="@drawable/backbtn"
+            android:tint="@color/colorWhite" />
 
         <TextView
             style="@style/whitetext25"

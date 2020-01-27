@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,8 +8,106 @@
 
     <include
         android:id="@+id/menu_toolbar"
-        layout="@layout/menu_toolbar"/>
+        layout="@layout/menu_toolbar" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menu_toolbar"
+        android:orientation="vertical"
+        android:weightSum="10">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary">
 
-</LinearLayout>
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/kritik"
+                app:civ_border_color="#FFF"
+                app:civ_border_width="4dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/profile_image"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/whitetext25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/profile_image"
+                    android:text="Kritik Ranjit" />
+
+                <TextView
+                    android:id="@+id/gender"
+                    style="@style/whitetext25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_toRightOf="@+id/profile_image"
+                    android:text="Male" />
+
+                <TextView
+                    android:id="@+id/address"
+                    style="@style/whitetext25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gender"
+                    android:layout_toRightOf="@+id/profile_image"
+                    android:text="Chagal, Kathmandu" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/gldetails"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:text="Age" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:text="Weight" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:text="Blood Group" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:text="Height" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
