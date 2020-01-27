@@ -42,6 +42,7 @@
             <!-- Column 1 -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvAbout"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -79,6 +80,7 @@
             <!-- Column 2 -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvTAC"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -118,6 +120,7 @@
             <!-- Column 1 -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvProfile"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -155,6 +158,7 @@
             <!-- Column 2 -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvChangePassword"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -176,13 +180,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/editprofile" />
+                        android:src="@drawable/lock" />
 
                     <TextView
                         style="@style/blackText17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Edit Profile"
+                        android:text="Change Password"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -194,6 +198,7 @@
             <!-- Column 1 -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvPrivacy"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -231,6 +236,7 @@
             <!-- Column 2 -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvLogout"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"

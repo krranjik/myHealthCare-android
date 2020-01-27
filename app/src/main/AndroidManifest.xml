@@ -15,7 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".controllers.EditProfile"></activity>
+        <activity android:name=".controllers.Privacy"></activity>
+        <activity android:name=".controllers.TermsAndCondition" />
+        <activity android:name=".controllers.About" />
+        <activity android:name=".controllers.EditProfile" />
         <activity android:name=".controllers.Profile" />
         <activity android:name=".controllers.Doctor" />
         <activity android:name=".controllers.Report" />
