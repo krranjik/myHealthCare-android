@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -69,44 +70,101 @@
 
         </RelativeLayout>
 
-        <GridLayout
-            android:id="@+id/gldetails"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"
-            android:columnCount="2"
-            android:orientation="horizontal"
-            android:rowCount="3">
+            android:layout_weight="8"
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <TextView
+                style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="0"
-                android:text="Age" />
+                android:text="Email: " />
 
             <TextView
+                android:id="@+id/email"
+                style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:text="Weight" />
+                android:text="kritik.ranjit4@gmail.com" />
 
             <TextView
+                style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="1"
-                android:layout_column="0"
-                android:text="Blood Group" />
+                android:text="DOB: " />
 
             <TextView
+                android:id="@+id/dob"
+                style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="1"
-                android:layout_column="1"
-                android:text="Height" />
+                android:text="23rd August 1998" />
 
-        </GridLayout>
+            <TextView
+                style="@style/blackText20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood Group: " />
+
+            <TextView
+                style="@style/blackText20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A+" />
+
+            <TextView
+                style="@style/blackText20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight (in kgs): " />
+
+            <TextView
+                style="@style/blackText20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="75 kgs" />
+
+            <TextView
+                style="@style/blackText20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height (in inch): " />
+
+            <TextView
+                style="@style/blackText20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5'7''" />
+
+            <TextView
+                style="@style/blackText20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number: " />
+
+            <TextView
+                style="@style/blackText20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+977 9860841830" />
+
+            <Button
+                android:id="@+id/editprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/btnstyle1"
+                android:padding="10dp"
+                android:text="Edit Profile"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
 
     </LinearLayout>
 

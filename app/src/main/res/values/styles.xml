@@ -37,6 +37,11 @@
 <!--        <item name="android:textStyle">bold</item>-->
     </style>
 
+    <style name="graytext20">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
     <style name="whitetext25">
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">25dp</item>

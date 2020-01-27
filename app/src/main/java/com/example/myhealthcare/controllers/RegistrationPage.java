@@ -43,7 +43,7 @@ public class RegistrationPage extends AppCompatActivity implements RadioGroup.On
                 uemail = email.getText().toString();
                 uusername = username.getText().toString();
                 upassword = password.getText().toString();
-                User user = new User(uname, uusername, upassword, uemail, "", "", ugender, "", "", "");
+                User user = new User(uname, uusername, upassword, uemail, "", "", ugender, "", "", "","","");
                 if (userAPI.register(user)) {
                     Toast.makeText(RegistrationPage.this, "User has been registered", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(RegistrationPage.this, LoginPage.class));

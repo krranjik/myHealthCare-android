@@ -49,8 +49,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="30dp"
-                android:paddingBottom="25dp"
                 android:text="Dermatologists" />
+
+            <TextView
+                style="@style/graytext25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingBottom="20dp"
+                android:text="+977 9860841830" />
 
             <View
                 android:layout_width="match_parent"

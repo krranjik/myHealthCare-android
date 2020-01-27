@@ -1,8 +1,10 @@
 package com.example.myhealthcare.controllers;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,7 +14,6 @@ import android.widget.TextView;
 
 import com.example.myhealthcare.R;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -23,6 +24,7 @@ import java.util.Calendar;
 public class HomeFragment extends Fragment {
 
     View root;
+    CardView cvPrescription, cvReport, cvDoctor, cvAppointment;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -38,13 +40,46 @@ public class HomeFragment extends Fragment {
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat month_date = new SimpleDateFormat("MMMM");
         int date = calendar.get(Calendar.DAY_OF_MONTH);
-        String month =month_date.format(calendar.getTime());
+        String month = month_date.format(calendar.getTime());
 
         TextView textViewDate = root.findViewById(R.id.view_date);
         textViewDate.setText(String.valueOf(date));
 
         TextView textViewMonth = root.findViewById(R.id.view_month);
         textViewMonth.setText(month);
+
+        cvPrescription = root.findViewById(R.id.cvprescription);
+        cvReport = root.findViewById(R.id.cvReport);
+        cvAppointment = root.findViewById(R.id.cvAppointment);
+        cvDoctor = root.findViewById(R.id.cvDoctor);
+
+        cvPrescription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Prescription.class));
+            }
+        });
+
+        cvReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Report.class));
+            }
+        });
+
+        cvAppointment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Appointment.class));
+            }
+        });
+
+        cvDoctor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Doctor.class));
+            }
+        });
 
         return root;
     }

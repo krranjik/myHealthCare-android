@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/homeback"
     tools:context=".controllers.HomeFragment">
 
@@ -44,10 +44,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/view_month"
-                android:gravity="center"
-                android:textSize="23dp"
                 android:layout_marginTop="25dp"
-                android:text="Have a Nice Day !" />
+                android:gravity="center"
+                android:text="Have a Nice Day !"
+                android:textSize="23dp" />
 
         </RelativeLayout>
 
@@ -74,8 +74,8 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -104,6 +104,7 @@
             <!-- Column 2 -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvReport"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -143,6 +144,7 @@
             <!-- Column 1 -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvAppointment"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -180,6 +182,7 @@
             <!-- Column 2 -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvDoctor"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
