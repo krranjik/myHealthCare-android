@@ -47,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/profile_image"
-                    android:text="Kritik Ranjit" />
+                    android:text="name" />
 
                 <TextView
                     android:id="@+id/gender"
@@ -56,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/name"
                     android:layout_toRightOf="@+id/profile_image"
-                    android:text="Male" />
+                    android:text="gender" />
 
                 <TextView
                     android:id="@+id/address"
@@ -65,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/gender"
                     android:layout_toRightOf="@+id/profile_image"
-                    android:text="Chagal, Kathmandu" />
+                    android:text="address" />
             </LinearLayout>
 
         </RelativeLayout>
@@ -88,7 +88,7 @@
                 style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="kritik.ranjit4@gmail.com" />
+                android:text="" />
 
             <TextView
                 style="@style/blackText20"
@@ -101,7 +101,7 @@
                 style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23rd August 1998" />
+                android:text="" />
 
             <TextView
                 style="@style/blackText20"
@@ -110,10 +110,11 @@
                 android:text="Blood Group: " />
 
             <TextView
+                android:id="@+id/bloodgroup"
                 style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A+" />
+                android:text="" />
 
             <TextView
                 style="@style/blackText20"
@@ -122,10 +123,11 @@
                 android:text="Weight (in kgs): " />
 
             <TextView
+                android:id="@+id/weight"
                 style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="75 kgs" />
+                android:text="" />
 
             <TextView
                 style="@style/blackText20"
@@ -134,10 +136,11 @@
                 android:text="Height (in inch): " />
 
             <TextView
+                android:id="@+id/height"
                 style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5'7''" />
+                android:text="" />
 
             <TextView
                 style="@style/blackText20"
@@ -146,10 +149,11 @@
                 android:text="Phone Number: " />
 
             <TextView
+                android:id="@+id/phone"
                 style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+977 9860841830" />
+                android:text="" />
 
             <Button
                 android:id="@+id/editprofile"

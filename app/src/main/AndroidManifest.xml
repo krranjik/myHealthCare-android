@@ -19,7 +19,8 @@
         <activity android:name=".controllers.TermsAndCondition" />
         <activity android:name=".controllers.About" />
         <activity android:name=".controllers.EditProfile" />
-        <activity android:name=".controllers.Profile" />
+        <activity android:name=".controllers.Profile">
+        </activity>
         <activity android:name=".controllers.Doctor" />
         <activity android:name=".controllers.Report" />
         <activity android:name=".controllers.Appointment" />
