@@ -8,15 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myhealthcare.R;
+import com.example.myhealthcare.api.UserAPI;
+import com.example.myhealthcare.models.User;
 
 public class LoginPage extends AppCompatActivity {
 
     EditText username, password;
     TextView forgotpassword, createacc;
     Button btnlogin;
-    String usernametxt, passwordtxt;
+    String uusername, upassword;
 
 
     @Override
@@ -33,16 +36,24 @@ public class LoginPage extends AppCompatActivity {
         createacc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(LoginPage.this, RegistrationPage.class);
-                startActivity(myIntent);
+                startActivity(new Intent(LoginPage.this, RegistrationPage.class));
             }
         });
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(LoginPage.this, Dashboard.class);
-                startActivity(myIntent);
+                UserAPI userAPI = new UserAPI();
+                uusername = username.getText().toString();
+                upassword = password.getText().toString();
+                User user = new User(uusername, upassword);
+
+                if (userAPI.login(user)) {
+                    Toast.makeText(LoginPage.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(LoginPage.this, Dashboard.class));
+                } else {
+                    Toast.makeText(LoginPage.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

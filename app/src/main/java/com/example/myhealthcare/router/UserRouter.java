@@ -10,4 +10,7 @@ public interface UserRouter {
 
     @POST("registerpatient")
     Call<Void> register(@Body User user);
+
+    @POST("patientlogin")
+    Call<User> login(@Body User user);
 }
