@@ -2,15 +2,25 @@ package com.example.myhealthcare.models;
 
 public class Doctor {
 
-    private String name, department, phone, description, location, rating;
+    private String id, name, department, phone, description, location, rating, doctor_img;
 
-    public Doctor(String name, String department, String phone, String description, String location, String rating) {
+    public Doctor(String id, String name, String department, String phone, String description, String location, String rating, String doctor_img) {
+        this.id = id;
         this.name = name;
         this.department = department;
         this.phone = phone;
         this.description = description;
         this.location = location;
         this.rating = rating;
+        this.doctor_img = doctor_img;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getDoctor_img() {
+        return doctor_img;
     }
 
     public String getName() {

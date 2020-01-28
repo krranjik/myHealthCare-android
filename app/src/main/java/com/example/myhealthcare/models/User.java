@@ -2,10 +2,10 @@ package com.example.myhealthcare.models;
 
 public class User {
 
-    private String id, name, username, password, email, address, dob, gender, bloodgroup, weight, height, phone, patient_img;
+    private String _id, name, username, password, email, address, dob, gender, bloodgroup, weight, height, phone, patient_img;
 
-    public User(String id, String name, String username, String password, String email, String address, String dob, String gender, String bloodgroup, String weight, String height, String phone, String patient_img) {
-        this.id = id;
+    public User(String _id, String name, String username, String password, String email, String address, String dob, String gender, String bloodgroup, String weight, String height, String phone, String patient_img) {
+        this._id = _id;
         this.name = name;
         this.username = username;
         this.password = password;
@@ -36,7 +36,7 @@ public class User {
     }
 
     public String getId() {
-        return id;
+        return _id;
     }
 
     public String getName() {
