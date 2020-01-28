@@ -13,11 +13,11 @@
         tools:context=".controllers.Appointment">
 
         <include
-            android:id="@+id/menu_toolbar"
+            android:id="@+id/toolbar"
             layout="@layout/menu_toolbar" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_reports"
+            android:id="@+id/rv_appointment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp" />

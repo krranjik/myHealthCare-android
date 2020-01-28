@@ -13,7 +13,7 @@
         tools:context=".controllers.Report">
 
         <include
-            android:id="@+id/menu_toolbar"
+            android:id="@+id/toolbar"
             layout="@layout/menu_toolbar" />
 
         <androidx.recyclerview.widget.RecyclerView

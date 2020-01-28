@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -60,7 +61,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyHolder> 
     public class MyHolder extends RecyclerView.ViewHolder {
 
         TextView name, department;
-        CircleImageView doctor_img;
+        ImageView doctor_img;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);

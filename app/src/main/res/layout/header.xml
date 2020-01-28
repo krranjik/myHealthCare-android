@@ -22,10 +22,18 @@
             app:civ_border_width="2dp" />
 
         <TextView
-            style="@style/whitetext30"
+            style="@style/whitetext25"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="Welcome," />
+
+        <TextView
+            style="@style/whitetext20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
             android:text="Kritik Ranjit" />
 
     </LinearLayout>

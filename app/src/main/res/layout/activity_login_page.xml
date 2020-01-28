@@ -3,121 +3,124 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="10">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="85dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/applogo"
+            android:backgroundTint="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="210dp"
-                android:layout_height="85dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/applogo"
-                android:backgroundTint="@color/colorPrimary" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="90dp">
-
-                <EditText
-                    android:id="@+id/username"
-                    style="@style/bluetext20"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/user"
-                    android:drawableLeft="@drawable/user"
-                    android:drawablePadding="10dp"
-                    android:hint="Username"
-                    android:padding="15dp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:passwordToggleEnabled="true">
-
-                <EditText
-                    android:id="@+id/password"
-                    style="@style/bluetext20"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/lock"
-                    android:drawableLeft="@drawable/lock"
-                    android:drawablePadding="10dp"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:padding="15dp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <CheckBox
-                android:id="@+id/rememberMe"
+            <EditText
+                android:id="@+id/username"
                 style="@style/bluetext20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:buttonTint="@color/colorPrimary"
-                android:padding="5dp"
-                android:text="Remember Me" />
+                android:drawableStart="@drawable/user"
+                android:drawableLeft="@drawable/user"
+                android:drawablePadding="10dp"
+                android:hint="Username"
+                android:padding="15dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/btnlogin"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/btnstyle1"
-                android:text="Login"
-                android:textColor="#FFF"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:passwordToggleEnabled="true">
 
-            <LinearLayout
+            <EditText
+                android:id="@+id/password"
+                style="@style/bluetext20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:drawableStart="@drawable/lock"
+                android:drawableLeft="@drawable/lock"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="15dp" />
 
-                <TextView
-                    android:id="@+id/resetPw"
-                    style="@style/bluetext20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_weight="1"
-                    android:text="Reset Password" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
-                    style="@style/bluetext20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text=" | " />
+        <CheckBox
+            android:id="@+id/rememberMe"
+            style="@style/bluetext20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/colorPrimary"
+            android:padding="5dp"
+            android:text="Remember Me" />
 
-                <TextView
-                    android:id="@+id/createacc"
-                    style="@style/bluetext20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:text="Create Account" />
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btnstyle1"
+            android:text="Login"
+            android:textColor="#FFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-            </LinearLayout>
+    </LinearLayout>
 
-        </LinearLayout>
-    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="2"
+        android:padding="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/resetPw"
+            style="@style/bluetext20"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reset Password" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="23dp"
+            android:background="@color/colorLine" />
+
+        <TextView
+            android:id="@+id/createacc"
+            style="@style/bluetext20"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Create Account" />
+
+    </LinearLayout>
+
 </LinearLayout>

@@ -184,7 +184,6 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/btnstyle1"
-                android:fontFamily="@font/centurygothic"
                 android:text="Sign up"
                 android:textColor="#FFF"
                 android:textSize="20dp"

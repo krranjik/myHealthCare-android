@@ -91,7 +91,7 @@
                         android:src="@drawable/prescription" />
 
                     <TextView
-                        style="@style/blackText17"
+                        style="@style/blackText20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Prescription"
@@ -129,7 +129,7 @@
                         android:src="@drawable/report" />
 
                     <TextView
-                        style="@style/blackText17"
+                        style="@style/blackText20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Reports"
@@ -169,7 +169,7 @@
                         android:src="@drawable/appointment" />
 
                     <TextView
-                        style="@style/blackText17"
+                        style="@style/blackText20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Appointment"
@@ -207,7 +207,7 @@
                         android:src="@drawable/doctor" />
 
                     <TextView
-                        style="@style/blackText17"
+                        style="@style/blackText20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Doctors"

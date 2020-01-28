@@ -67,7 +67,7 @@
                         android:src="@drawable/about" />
 
                     <TextView
-                        style="@style/blackText17"
+                        style="@style/blackText20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="About"
@@ -105,7 +105,7 @@
                         android:src="@drawable/terms" />
 
                     <TextView
-                        style="@style/blackText17"
+                        style="@style/blackText20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Terms and Condition"
@@ -145,7 +145,7 @@
                         android:src="@drawable/profile" />
 
                     <TextView
-                        style="@style/blackText17"
+                        style="@style/blackText20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Profile"
@@ -183,7 +183,7 @@
                         android:src="@drawable/lock" />
 
                     <TextView
-                        style="@style/blackText17"
+                        style="@style/blackText20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Change Password"
@@ -223,7 +223,7 @@
                         android:src="@drawable/privacy" />
 
                     <TextView
-                        style="@style/blackText17"
+                        style="@style/blackText20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Privacy"
@@ -261,7 +261,7 @@
                         android:src="@drawable/logout" />
 
                     <TextView
-                        style="@style/blackText17"
+                        style="@style/blackText20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Logout"

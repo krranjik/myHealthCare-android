@@ -8,13 +8,13 @@
     tools:context=".controllers.Profile">
 
     <include
-        android:id="@+id/menu_toolbar"
-        layout="@layout/menu_toolbar" />
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/menu_toolbar"
+        android:layout_below="@+id/toolbar"
         android:orientation="vertical"
         android:weightSum="10">
 
