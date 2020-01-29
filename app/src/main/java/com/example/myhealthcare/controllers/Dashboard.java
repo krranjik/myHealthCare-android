@@ -23,6 +23,8 @@ import com.example.myhealthcare.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView mMainNav;
@@ -32,6 +34,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     private NotificationFragment notificationFragment;
     private SettingsFragment settingsFragment;
 
+    CircleImageView profile;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
 
@@ -40,6 +43,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+        profile = findViewById(R.id.profile_image);
         mMainFrame = (FrameLayout) findViewById(R.id.main_frame);
         mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
         drawerLayout = findViewById(R.id.drawlayout);
@@ -101,6 +105,12 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+        switch (menuItem.getItemId()) {
+            case R.id.profile_image:
+                startActivity(new Intent(Dashboard.this, Profile.class));
+                return true;
+        }
 
         switch (menuItem.getItemId()) {
             case R.id.menu_prescription:

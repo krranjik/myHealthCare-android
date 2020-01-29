@@ -93,7 +93,6 @@
                     android:drawableLeft="@drawable/lock"
                     android:drawablePadding="10dp"
                     android:hint="Password"
-                    android:inputType="textPassword"
                     android:padding="15dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -113,7 +112,6 @@
                     android:drawableLeft="@drawable/lock"
                     android:drawablePadding="10dp"
                     android:hint="Re-type Password"
-                    android:inputType="textPassword"
                     android:padding="15dp" />
 
             </com.google.android.material.textfield.TextInputLayout>

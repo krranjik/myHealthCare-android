@@ -21,9 +21,4 @@
             android:icon="@drawable/doctor"
             android:title="@string/menu_doctor" />
 
-        <item
-            android:id="@+id/menu_profile"
-            android:icon="@drawable/profile"
-            android:title="Profile" />
-
 </menu>
