@@ -1,24 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
         <item
             android:id="@+id/menu_prescription"
+            android:checkable="true"
             android:icon="@drawable/prescription"
             android:title="@string/menu_prescription" />
 
         <item
             android:id="@+id/menu_appointment"
+            android:checkable="true"
             android:icon="@drawable/appointment"
             android:title="@string/menu_appointment" />
 
         <item
             android:id="@+id/menu_report"
+            android:checkable="true"
             android:icon="@drawable/report"
             android:title="@string/menu_report" />
 
         <item
             android:id="@+id/menu_doctor"
+            android:checkable="true"
             android:icon="@drawable/doctor"
             android:title="@string/menu_doctor" />
+
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/about"
+            android:checkable="true"
+            android:icon="@drawable/about"
+            android:title="About" />
+
+        <item
+            android:id="@+id/help"
+            android:checkable="true"
+            android:icon="@drawable/about"
+            android:title="Help" />
+
+        <item
+            android:id="@+id/menu_logout"
+            android:checkable="true"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+
+    </group>
 
 </menu>

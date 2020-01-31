@@ -71,9 +71,7 @@
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_margin="15dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -81,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
+                    android:padding="5dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -109,9 +107,7 @@
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_margin="15dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -119,7 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
+                    android:padding="5dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -149,9 +145,7 @@
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_margin="15dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -159,7 +153,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
+                    android:padding="5dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -187,9 +181,7 @@
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_margin="15dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -197,7 +189,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
+                    android:padding="5dp"
                     android:orientation="vertical">
 
                     <ImageView

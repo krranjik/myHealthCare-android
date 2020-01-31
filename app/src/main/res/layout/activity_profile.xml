@@ -9,7 +9,7 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
+        layout="@layout/menu_toolbar" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,128 +47,340 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/profile_image"
-                    android:text="name" />
+                    android:text="Kritik Ranjit" />
 
                 <TextView
                     android:id="@+id/gender"
-                    style="@style/whitetext25"
+                    style="@style/whitetext20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/name"
                     android:layout_toRightOf="@+id/profile_image"
-                    android:text="gender" />
+                    android:text="Male" />
 
                 <TextView
-                    android:id="@+id/address"
-                    style="@style/whitetext25"
+                    android:id="@+id/email"
+                    style="@style/whitetext20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/gender"
                     android:layout_toRightOf="@+id/profile_image"
-                    android:text="address" />
+                    android:text="kritik.ranjit4@gmail.com" />
             </LinearLayout>
 
         </RelativeLayout>
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="8"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:padding="14dp"
+            android:rowCount="3">
 
-            <TextView
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Email: " />
+            <!-- Row 1 -->
 
-            <TextView
-                android:id="@+id/email"
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="" />
+            <!-- Column 1 -->
 
-            <TextView
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DOB: " />
-
-            <TextView
-                android:id="@+id/dob"
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Blood Group: " />
-
-            <TextView
-                android:id="@+id/bloodgroup"
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Weight (in kgs): " />
-
-            <TextView
-                android:id="@+id/weight"
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Height (in inch): " />
-
-            <TextView
-                android:id="@+id/height"
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Phone Number: " />
-
-            <TextView
-                android:id="@+id/phone"
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <Button
-                android:id="@+id/editprofile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAddress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:layout_margin="10dp"
-                android:background="@drawable/btnstyle1"
-                android:padding="10dp"
-                android:text="Edit Profile"
-                android:textColor="@color/colorWhite"
-                android:textSize="15dp" />
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
 
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="7dp">
 
-        </LinearLayout>
+                    <ImageView
+                        android:id="@+id/addressicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/address" />
+
+                    <TextView
+                        style="@style/bluetext15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@+id/addressicon"
+                        android:text="Address" />
+
+                    <TextView
+                        android:id="@+id/address"
+                        style="@style/darkgraytext17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/addressicon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5dp"
+                        android:padding="2dp"
+                        android:text="Chagal, Tahachal" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Column 2 -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDOB"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="7dp">
+
+                    <ImageView
+                        android:id="@+id/dobicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/calendar" />
+
+                    <TextView
+                        style="@style/bluetext15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@+id/dobicon"
+                        android:text="DOB" />
+
+                    <TextView
+                        android:id="@+id/dob"
+                        style="@style/darkgraytext17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dobicon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="23/08/1998" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Row 2 -->
+
+            <!-- Column 1 -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvBloodgroup"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="7dp">
+
+                    <ImageView
+                        android:id="@+id/bloodgroupicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bloodgroup" />
+
+                    <TextView
+                        style="@style/bluetext15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@+id/bloodgroupicon"
+                        android:text="Blood Group" />
+
+                    <TextView
+                        android:id="@+id/bloodgroup"
+                        style="@style/darkgraytext17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bloodgroupicon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="A+" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Column 2 -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvWeight"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="7dp">
+
+                    <ImageView
+                        android:id="@+id/weighticon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/weight" />
+
+                    <TextView
+                        style="@style/bluetext15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@+id/weighticon"
+                        android:text="Weight" />
+
+                    <TextView
+                        android:id="@+id/weight"
+                        style="@style/darkgraytext17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/weighticon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="75 kgs" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Row 3 -->
+
+            <!-- Column 1 -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvHeight"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="7dp">
+
+                    <ImageView
+                        android:id="@+id/heighticon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/height" />
+
+                    <TextView
+                        style="@style/bluetext15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@+id/heighticon"
+                        android:text="Height" />
+
+                    <TextView
+                        android:id="@+id/height"
+                        style="@style/darkgraytext17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/heighticon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="5 ft. 7 inch" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Column 2 -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPhone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="7dp">
+
+                    <ImageView
+                        android:id="@+id/phoneicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/phone" />
+
+                    <TextView
+                        style="@style/bluetext15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@+id/phoneicon"
+                        android:text="Phone" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        style="@style/darkgraytext17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/phoneicon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="+977 9860841830" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/editprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/btnstyle1"
+            android:padding="10dp"
+            android:text="Edit Profile"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp" />
 
     </LinearLayout>
 

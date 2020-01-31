@@ -25,13 +25,15 @@
         <activity android:name=".controllers.Report" />
         <activity android:name=".controllers.Appointment" />
         <activity android:name=".controllers.Prescription" />
-        <activity android:name=".controllers.Dashboard" />
-        <activity android:name=".controllers.SplashScreen">
+        <activity android:name=".controllers.Dashboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".controllers.SplashScreen">
+
         </activity>
         <activity android:name=".controllers.RegistrationPage" />
         <activity android:name=".controllers.LoginPage" />

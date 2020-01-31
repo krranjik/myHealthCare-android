@@ -26,6 +26,12 @@
         <item name="android:textColor">#FFF</item>
     </style>
 
+    <style name="darkgraytext17">
+        <item name="android:textColor">@color/colorDarkGrey</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:fontFamily">@font/linotte</item>
+    </style>
+
     <style name="graytext20">
         <item name="android:textColor">@color/colorGrey</item>
         <item name="android:textSize">20dp</item>

@@ -14,12 +14,16 @@ import com.example.myhealthcare.api.UserAPI;
 public class Profile extends AppCompatActivity {
 
     TextView name, gender, address, email, dob, bloodgroup, weight, height, phone;
+    TextView title;
     Button editprofile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        title = findViewById(R.id.menu_title_holder);
+        title.setText("Profile");
 
         name = findViewById(R.id.name);
         gender = findViewById(R.id.gender);
@@ -32,15 +36,15 @@ public class Profile extends AppCompatActivity {
         phone = findViewById(R.id.phone);
         editprofile = findViewById(R.id.editprofile);
 
-        name.setText(UserAPI.userDetail.getName());
-        gender.setText(UserAPI.userDetail.getGender());
-        address.setText(UserAPI.userDetail.getAddress());
-        email.setText(UserAPI.userDetail.getEmail());
-        dob.setText(UserAPI.userDetail.getDob());
-        bloodgroup.setText(UserAPI.userDetail.getBloodgroup());
-        weight.setText(UserAPI.userDetail.getWeight());
-        height.setText(UserAPI.userDetail.getHeight());
-        phone.setText(UserAPI.userDetail.getPhone());
+//        name.setText(UserAPI.userDetail.getName());
+//        gender.setText(UserAPI.userDetail.getGender());
+//        address.setText(UserAPI.userDetail.getAddress());
+//        email.setText(UserAPI.userDetail.getEmail());
+//        dob.setText(UserAPI.userDetail.getDob());
+//        bloodgroup.setText(UserAPI.userDetail.getBloodgroup());
+//        weight.setText(UserAPI.userDetail.getWeight());
+//        height.setText(UserAPI.userDetail.getHeight());
+//        phone.setText(UserAPI.userDetail.getPhone());
 
         editprofile.setOnClickListener(new View.OnClickListener() {
             @Override
