@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvMedicineView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:id="@+id/medicinename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/medicineicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/medicine" />
+
+            <TextView
+                style="@style/blackText20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/medicineicon"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Medicine Name" />
+
+            <ImageView
+                android:id="@+id/sunicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/medicineicon"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/sun" />
+
+            <ImageView
+                android:id="@+id/dayicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/medicineicon"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/sunicon"
+                android:src="@drawable/day" />
+
+            <ImageView
+                android:id="@+id/moonicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_below="@id/medicineicon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/dayicon"
+                android:src="@drawable/moon" />
+
+            <TextView
+                android:id="@+id/morntime"
+                style="@style/bluetext15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sunicon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="20dp"
+                android:text="Time" />
+
+            <TextView
+                android:id="@+id/daytime"
+                style="@style/bluetext15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sunicon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_toRightOf="@+id/morntime"
+                android:text="Time" />
+
+            <TextView
+                android:id="@+id/nighttime"
+                style="@style/bluetext15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sunicon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/daytime"
+                android:text="Time" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

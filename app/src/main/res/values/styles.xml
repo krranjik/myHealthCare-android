@@ -87,6 +87,13 @@
         <item name="android:fontFamily">@font/linotte</item>
     </style>
 
+    <style name="italicblackText25">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:fontFamily">@font/linotte</item>
+    </style>
+
     <style name="blacktext30">
         <item name="android:textColor">@color/colorBlack</item>
         <item name="android:textSize">30dp</item>

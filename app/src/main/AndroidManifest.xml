@@ -15,12 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".controllers.DoctorProfile"></activity>
+        <activity android:name=".controllers.PrescriptionDetail"></activity>
+        <activity android:name=".controllers.DoctorProfile" />
         <activity android:name=".controllers.Privacy" />
         <activity android:name=".controllers.TermsAndCondition" />
         <activity android:name=".controllers.About" />
         <activity android:name=".controllers.EditProfile" />
-        <activity android:name=".controllers.Profile"></activity>
+        <activity android:name=".controllers.Profile" />
         <activity android:name=".controllers.Doctor" />
         <activity android:name=".controllers.Report" />
         <activity android:name=".controllers.Appointment" />
@@ -32,9 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controllers.SplashScreen">
-
-        </activity>
+        <activity android:name=".controllers.SplashScreen"></activity>
         <activity android:name=".controllers.RegistrationPage" />
         <activity android:name=".controllers.LoginPage" />
         <activity android:name=".controllers.WelcomeScreen" />

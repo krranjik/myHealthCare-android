@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.myhealthcare.R;
@@ -15,6 +16,7 @@ public class Profile extends AppCompatActivity {
 
     TextView name, gender, address, email, dob, bloodgroup, weight, height, phone;
     TextView title;
+    ImageView backbtn;
     Button editprofile;
 
     @Override
@@ -24,6 +26,13 @@ public class Profile extends AppCompatActivity {
 
         title = findViewById(R.id.menu_title_holder);
         title.setText("Profile");
+        backbtn = findViewById(R.id.back);
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Profile.this, SettingsFragment.class));
+            }
+        });
 
         name = findViewById(R.id.name);
         gender = findViewById(R.id.gender);

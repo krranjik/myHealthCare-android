@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controllers.PrescriptionDetail">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/menu_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/rvhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/hello"
+            style="@style/italicblackText25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello, " />
+
+        <TextView
+            android:id="@+id/patientname"
+            style="@style/blackText25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/hello"
+            android:text="Patient" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/prestitle"
+        style="@style/bluetext20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvhead"
+        android:layout_centerHorizontal="true"
+        android:text="Your Medicines" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prestitle"
+        android:layout_margin="20dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvdate"
+                style="@style/blackText20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prescribed Date: " />
+
+            <TextView
+                android:id="@+id/presdate"
+                style="@style/bluetext20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvdate"
+                android:text="Date" />
+
+            <TextView
+                android:id="@+id/medicinecourse"
+                style="@style/blackText20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvdate"
+                android:text="Medicine Course: " />
+
+            <TextView
+                android:id="@+id/numberdays"
+                style="@style/bluetext20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/presdate"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/medicinecourse"
+                android:text="no. of days" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cvCourse">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMedicinelist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
