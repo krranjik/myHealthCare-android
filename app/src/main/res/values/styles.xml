@@ -6,18 +6,17 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
     <style name="bluetext15">
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">17dp</item>
-        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
     <style name="bluetext20">
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
     <style name="quote">
@@ -29,76 +28,64 @@
     <style name="darkgraytext17">
         <item name="android:textColor">@color/colorDarkGrey</item>
         <item name="android:textSize">17dp</item>
-        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
     <style name="graytext20">
         <item name="android:textColor">@color/colorGrey</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:fontFamily">@font/linotte</item>
         <item name="android:textStyle">italic</item>
     </style>
 
     <style name="graytext25">
         <item name="android:textColor">@color/colorGrey</item>
         <item name="android:textSize">25dp</item>
-        <item name="android:fontFamily">@font/linotte</item>
         <item name="android:textStyle">italic</item>
     </style>
 
     <style name="whitetext20">
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
     <style name="whitetext25">
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">25dp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
     <style name="whitetext30">
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">30dp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
     <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxStrokeColor">@color/colorPrimary</item>
-<!--                <item name="android:fontFamily">@font/centurygothic</item>-->
         <item name="boxStrokeWidth">2dp</item>
         <item name="android:textColorHint">@color/colorPrimary</item>
-        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
     <style name="blackText20">
         <item name="android:textColor">@color/colorBlack</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
     <style name="blackText25">
         <item name="android:textColor">@color/colorBlack</item>
         <item name="android:textSize">25dp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
     <style name="italicblackText25">
         <item name="android:textColor">@color/colorBlack</item>
         <item name="android:textSize">25dp</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
     <style name="blacktext30">
         <item name="android:textColor">@color/colorBlack</item>
         <item name="android:textSize">30dp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:fontFamily">@font/linotte</item>
     </style>
 
 </resources>

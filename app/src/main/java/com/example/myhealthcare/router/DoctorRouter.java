@@ -13,6 +13,6 @@ public interface DoctorRouter {
     @GET("getalldoctors")
     Call<List<Doctor>> getAllDoctors();
 
-    @GET("findpatientbyid/{id}")
+    @GET("getdoctorbyid/{id}")
     Call<Doctor> getDoctorById(@Path("id") String id);
 }

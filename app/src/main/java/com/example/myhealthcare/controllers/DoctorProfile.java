@@ -29,6 +29,7 @@ public class DoctorProfile extends AppCompatActivity {
         rating = findViewById(R.id.rating);
         DoctorAPI doctorAPI = new DoctorAPI();
         id = getIntent().getStringExtra("id");
+        System.out.println(id + " as");
         Doctor docDetail = doctorAPI.getDoctorDetails(id);
 
         name.setText(docDetail.getName());
@@ -36,6 +37,7 @@ public class DoctorProfile extends AppCompatActivity {
         phone.setText(docDetail.getPhone());
         description.setText(docDetail.getDescription());
         location.setText(docDetail.getLocation());
-        rating.setNumStars(Integer.parseInt(docDetail.getRating()));
+//        System.out.println(docDetail.getRating());
+        rating.setNumStars(Integer.parseInt("5"));
     }
 }

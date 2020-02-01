@@ -16,6 +16,7 @@ public class DoctorAPI {
     Doctor docDetail;
 
     public Doctor getDoctorDetails(String id) {
+        System.out.println(id);
         Call<Doctor> doctorCall = doctorRouter.getDoctorById(id);
         Strict.StrictMode();
         try {

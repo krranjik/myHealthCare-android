@@ -38,7 +38,7 @@ public class SettingsFragment extends Fragment {
         cvProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), Dashboard.class));
+                startActivity(new Intent(getContext(), Profile.class));
             }
         });
         return root;
