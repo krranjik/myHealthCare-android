@@ -7,41 +7,42 @@
 
     <RelativeLayout
         android:id="@+id/relative"
+        android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/presicon"
+            android:id="@+id/reporticon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:src="@drawable/prescription1"/>
+            android:src="@drawable/report1"/>
 
-            <TextView
-                android:id="@+id/prescriptionname"
-                style="@style/bluetext20"
-                android:layout_toRightOf="@id/presicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Prescription Name" />
+        <TextView
+            android:id="@+id/reportname"
+            style="@style/bluetext20"
+            android:layout_toRightOf="@id/reporticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report Name" />
 
-            <TextView
-                android:id="@+id/presby"
-                style="@style/blackText20"
-                android:layout_toRightOf="@id/presicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/prescriptionname"
-                android:text="Referred By: " />
+        <TextView
+            android:id="@+id/publish"
+            style="@style/blackText20"
+            android:layout_toRightOf="@id/reporticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reportname"
+            android:text="Published Date: " />
 
-            <TextView
-                android:id="@+id/department"
-                style="@style/graytext20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/prescriptionname"
-                android:layout_toRightOf="@+id/presby"
-                android:text="Doctor Name " />
+        <TextView
+            android:id="@+id/publishdate"
+            style="@style/graytext20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reportname"
+            android:layout_toRightOf="@+id/publish"
+            android:text="Date" />
 
     </RelativeLayout>
 
@@ -60,11 +61,13 @@
         android:layout_below="@+id/line"
         android:orientation="horizontal">
 
-        <ImageView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:src="@drawable/next" />
+            android:text="View"
+            android:background="@drawable/btnstyle1"
+            style="@style/whitetext20"/>
     </RelativeLayout>
 
 </RelativeLayout>
