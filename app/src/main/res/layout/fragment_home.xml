@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingTop="15dp"
+                android:paddingTop="10dp"
                 android:text="Date" />
 
             <TextView
@@ -40,11 +40,31 @@
                 android:text="Month" />
 
             <TextView
+                android:id="@+id/wel"
+                style="@style/whitetext25"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_month"
+                android:gravity="center"
+                android:text="Welcome," />
+
+            <TextView
+                android:id="@+id/dashname"
+                style="@style/whitetext20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wel"
+                android:gravity="center"
+                android:text="Name" />
+
+
+            <TextView
                 style="@style/whitetext30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/view_month"
-                android:layout_marginTop="25dp"
+                android:layout_below="@id/dashname"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="Have a Nice Day !"
                 android:textSize="23dp" />

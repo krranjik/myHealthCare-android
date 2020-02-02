@@ -13,6 +13,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.myhealthcare.R;
+import com.example.myhealthcare.api.UserAPI;
+import com.example.myhealthcare.helper.UserSession;
+import com.example.myhealthcare.models.User;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -25,6 +28,7 @@ public class HomeFragment extends Fragment {
 
     View root;
     CardView cvPrescription, cvReport, cvDoctor, cvAppointment;
+    TextView dashname;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -52,6 +56,14 @@ public class HomeFragment extends Fragment {
         cvReport = root.findViewById(R.id.cvReport);
         cvAppointment = root.findViewById(R.id.cvAppointment);
         cvDoctor = root.findViewById(R.id.cvDoctor);
+        dashname = root.findViewById(R.id.dashname);
+
+        UserSession userSession = new UserSession(getActivity());
+        String id = userSession.getID();
+
+        UserAPI userAPI = new UserAPI();
+        User user = userAPI.getPatientDetail(id);
+        dashname.setText(user.getName());
 
         cvPrescription.setOnClickListener(new View.OnClickListener() {
             @Override

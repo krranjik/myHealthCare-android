@@ -20,6 +20,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myhealthcare.R;
+import com.example.myhealthcare.api.UserAPI;
+import com.example.myhealthcare.helper.GetImage;
+import com.example.myhealthcare.helper.UserSession;
+import com.example.myhealthcare.models.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -38,6 +42,11 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
 
+    TextView headername, headeremail;
+    CircleImageView imageView;
+
+    UserSession userSession;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +58,27 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         drawerLayout = findViewById(R.id.drawlayout);
         NavigationView navigationView = findViewById(R.id.menu_nav);
         ImageButton menubutton = findViewById(R.id.menubar);
+
+
+        headername = navigationView.getHeaderView(0).findViewById(R.id.headername);
+        headeremail = navigationView.getHeaderView(0).findViewById(R.id.headeremail);
+        imageView = navigationView.getHeaderView(0).findViewById(R.id.profileimg);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Dashboard.this, Profile.class));
+            }
+        });
+
+        UserAPI userAPI = new UserAPI();
+        userSession = new UserSession(this);
+        String id = userSession.getID();
+        User user = userAPI.getPatientDetail(id);
+
+        headername.setText(user.getName());
+        headeremail.setText(user.getEmail());
+        GetImage.setImage(user.getImage(), imageView);
 
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -105,12 +135,6 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-        switch (menuItem.getItemId()) {
-            case R.id.profile_image:
-                startActivity(new Intent(Dashboard.this, Profile.class));
-                return true;
-        }
 
         switch (menuItem.getItemId()) {
             case R.id.menu_prescription:

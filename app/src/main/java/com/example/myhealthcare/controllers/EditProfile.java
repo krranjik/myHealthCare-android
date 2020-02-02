@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.myhealthcare.R;
 import com.example.myhealthcare.api.UserAPI;
 import com.example.myhealthcare.helper.GetImage;
+import com.example.myhealthcare.helper.Notification;
 import com.example.myhealthcare.helper.UserSession;
 import com.example.myhealthcare.models.User;
 
@@ -88,6 +89,7 @@ public class EditProfile extends AppCompatActivity {
                 UserAPI userAPI = new UserAPI();
                 if (userAPI.updatePatient(user)) {
                     Toast.makeText(EditProfile.this, "Update Successful", Toast.LENGTH_SHORT).show();
+                    Notification.givenotification(EditProfile.this,"Profile Updated Successfully");
                     startActivity(new Intent(EditProfile.this, Profile.class));
                 } else {
                     Toast.makeText(EditProfile.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
