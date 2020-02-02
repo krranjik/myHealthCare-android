@@ -13,6 +13,8 @@ public class UserAPI {
     UserRouter userRouter = Retro.getInstance().create(UserRouter.class);
     boolean checkReg, checkLogin, checkUpdate = false;
     public static User userDetail = null;
+    public static String token ;
+    public static String id ;
 
     public boolean register(User user) {
 
@@ -38,6 +40,8 @@ public class UserAPI {
             if (regResponse.isSuccessful()) {
                 checkLogin = true;
                 userDetail = regResponse.body();
+                token=regResponse.body().getToken();
+                id=regResponse.body().get_id();
             }
         } catch (IOException e) {
             e.printStackTrace();

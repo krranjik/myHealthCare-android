@@ -2,9 +2,9 @@ package com.example.myhealthcare.models;
 
 public class Doctor {
 
-    private String _id, name, department, phone, description, location, rating, doctor_img;
+    private String _id, name, department, phone, description, location, rating, image;
 
-    public Doctor(String _id, String name, String department, String phone, String description, String location, String rating, String doctor_img) {
+    public Doctor(String _id, String name, String department, String phone, String description, String location, String rating, String image) {
         this._id = _id;
         this.name = name;
         this.department = department;
@@ -12,15 +12,15 @@ public class Doctor {
         this.description = description;
         this.location = location;
         this.rating = rating;
-        this.doctor_img = doctor_img;
+        this.image = image;
     }
 
     public String getId() {
         return _id;
     }
 
-    public String getDoctor_img() {
-        return doctor_img;
+    public String getImage() {
+        return image;
     }
 
     public String getName() {

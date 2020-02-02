@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.myhealthcare.R;
+import com.example.myhealthcare.helper.UserSession;
 
 
 /**
@@ -20,7 +21,8 @@ import com.example.myhealthcare.R;
 public class SettingsFragment extends Fragment {
 
     View root;
-    CardView cvProfile;
+    CardView cvProfile, cvLogout;
+    UserSession userSession;
 
 
     public SettingsFragment() {
@@ -35,10 +37,21 @@ public class SettingsFragment extends Fragment {
         root = inflater.inflate(R.layout.fragment_settings, container, false);
 
         cvProfile = root.findViewById(R.id.cvProfile);
+        userSession = new UserSession(getActivity());
         cvProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), Profile.class));
+            }
+        });
+
+        cvLogout = root.findViewById(R.id.cvLogout);
+        cvLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                userSession.endSession();
+                startActivity(new Intent(getActivity(), LoginPage.class));
+
             }
         });
         return root;

@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".controllers.PrescriptionDetail"></activity>
+        <activity android:name=".controllers.BookAppointment"></activity>
+        <activity android:name=".controllers.PrescriptionDetail" />
         <activity android:name=".controllers.DoctorProfile" />
         <activity android:name=".controllers.Privacy" />
         <activity android:name=".controllers.TermsAndCondition" />
@@ -27,15 +28,19 @@
         <activity android:name=".controllers.Appointment" />
         <activity android:name=".controllers.Prescription" />
         <activity android:name=".controllers.Dashboard">
+
+        </activity>
+        <activity android:name=".controllers.SplashScreen" >
+
+        </activity>
+        <activity android:name=".controllers.RegistrationPage" />
+        <activity android:name=".controllers.LoginPage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controllers.SplashScreen"></activity>
-        <activity android:name=".controllers.RegistrationPage" />
-        <activity android:name=".controllers.LoginPage" />
         <activity android:name=".controllers.WelcomeScreen" />
     </application>
 

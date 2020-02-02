@@ -9,4 +9,6 @@
     <string name="menu_appointment">Appointment</string>
     <string name="menu_report">Report</string>
     <string name="menu_doctor">Doctor</string>
+
+    <string name="user_session">USER_SESSION</string>
 </resources>

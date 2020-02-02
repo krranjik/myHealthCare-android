@@ -92,6 +92,7 @@
                     android:drawableStart="@drawable/lock"
                     android:drawableLeft="@drawable/lock"
                     android:drawablePadding="10dp"
+                    android:inputType="textPassword"
                     android:hint="Password"
                     android:padding="15dp" />
 
@@ -110,6 +111,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/lock"
                     android:drawableLeft="@drawable/lock"
+                    android:inputType="textPassword"
                     android:drawablePadding="10dp"
                     android:hint="Re-type Password"
                     android:padding="15dp" />
