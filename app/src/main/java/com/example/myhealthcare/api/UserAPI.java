@@ -12,7 +12,7 @@ public class UserAPI {
 
     UserRouter userRouter = Retro.getInstance().create(UserRouter.class);
     boolean checkReg, checkLogin, checkUpdate = false;
-    public static User userDetail = null;
+    public static User userDetail ;
     public static String token ;
     public static String id ;
 
@@ -49,18 +49,18 @@ public class UserAPI {
         return checkLogin;
     }
 
-    public void getPatientDetail() {
-        Call<User> userCall = userRouter.getPatientByid(userDetail.getId());
+    public User getPatientDetail(String id) {
+        Call<User> userCall = userRouter.getPatientByid(id);
         Strict.StrictMode();
         try {
             Response<User> response = userCall.execute();
             if (response.isSuccessful()) {
                 userDetail=response.body();
-
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return userDetail;
     }
 
     public boolean updatePatient(User user) {
@@ -70,7 +70,6 @@ public class UserAPI {
             Response<Void> response = userCall.execute();
             if (response.isSuccessful()) {
                 checkUpdate = true;
-                getPatientDetail();
             }
         } catch (IOException e) {
             e.printStackTrace();

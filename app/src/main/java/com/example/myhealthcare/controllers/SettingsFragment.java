@@ -21,7 +21,7 @@ import com.example.myhealthcare.helper.UserSession;
 public class SettingsFragment extends Fragment {
 
     View root;
-    CardView cvProfile, cvLogout;
+    CardView cvProfile, cvLogout, cvAbout;
     UserSession userSession;
 
 
@@ -54,6 +54,8 @@ public class SettingsFragment extends Fragment {
 
             }
         });
+
+        cvAbout = root.findViewById(R.id.cvAbout);
         return root;
     }
 }

@@ -25,12 +25,12 @@
             android:background="@color/colorPrimary">
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/profile_image"
+                android:id="@+id/profile_img"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
                 android:layout_margin="10dp"
-                android:src="@drawable/kritik"
+                android:src="@drawable/profile"
                 app:civ_border_color="#FFF"
                 app:civ_border_width="4dp" />
 
@@ -38,34 +38,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/profile_image"
+                android:layout_toRightOf="@+id/profile_img"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/pname"
                     style="@style/whitetext25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/profile_image"
-                    android:text="Kritik Ranjit" />
+                    android:layout_toRightOf="@+id/profile_img"
+                    android:text="Name" />
 
                 <TextView
-                    android:id="@+id/gender"
+                    android:id="@+id/pgender"
                     style="@style/whitetext20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/name"
-                    android:layout_toRightOf="@+id/profile_image"
-                    android:text="Male" />
+                    android:layout_below="@+id/pname"
+                    android:layout_toRightOf="@+id/profile_img"
+                    android:text="Gender" />
 
                 <TextView
-                    android:id="@+id/email"
+                    android:id="@+id/pemail"
                     style="@style/whitetext20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/gender"
-                    android:layout_toRightOf="@+id/profile_image"
-                    android:text="kritik.ranjit4@gmail.com" />
+                    android:layout_below="@+id/pgender"
+                    android:layout_toRightOf="@+id/profile_img"
+                    android:text="Email" />
             </LinearLayout>
 
         </RelativeLayout>
@@ -116,7 +116,7 @@
                         android:text="Address" />
 
                     <TextView
-                        android:id="@+id/address"
+                        android:id="@+id/paddress"
                         style="@style/darkgraytext17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -124,7 +124,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_margin="5dp"
                         android:padding="2dp"
-                        android:text="Chagal, Tahachal" />
+                        android:text="Address" />
 
                 </RelativeLayout>
 
@@ -164,14 +164,14 @@
                         android:text="DOB" />
 
                     <TextView
-                        android:id="@+id/dob"
+                        android:id="@+id/pdob"
                         style="@style/darkgraytext17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/dobicon"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"
-                        android:text="23/08/1998" />
+                        android:text="DOB" />
 
                 </RelativeLayout>
 
@@ -213,14 +213,14 @@
                         android:text="Blood Group" />
 
                     <TextView
-                        android:id="@+id/bloodgroup"
+                        android:id="@+id/pbloodgroup"
                         style="@style/darkgraytext17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/bloodgroupicon"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"
-                        android:text="A+" />
+                        android:text="BG" />
 
                 </RelativeLayout>
 
@@ -260,14 +260,14 @@
                         android:text="Weight" />
 
                     <TextView
-                        android:id="@+id/weight"
+                        android:id="@+id/pweight"
                         style="@style/darkgraytext17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/weighticon"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"
-                        android:text="75 kgs" />
+                        android:text="Weight" />
 
                 </RelativeLayout>
 
@@ -309,14 +309,14 @@
                         android:text="Height" />
 
                     <TextView
-                        android:id="@+id/height"
+                        android:id="@+id/pheight"
                         style="@style/darkgraytext17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/heighticon"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"
-                        android:text="5 ft. 7 inch" />
+                        android:text="Height" />
 
                 </RelativeLayout>
 
@@ -356,14 +356,14 @@
                         android:text="Phone" />
 
                     <TextView
-                        android:id="@+id/phone"
+                        android:id="@+id/pphone"
                         style="@style/darkgraytext17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/phoneicon"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"
-                        android:text="+977 9860841830" />
+                        android:text="Phone" />
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
