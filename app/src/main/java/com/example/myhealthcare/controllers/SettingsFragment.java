@@ -56,6 +56,12 @@ public class SettingsFragment extends Fragment {
         });
 
         cvAbout = root.findViewById(R.id.cvAbout);
+        cvAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), About.class));
+            }
+        });
         return root;
     }
 }
