@@ -118,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:padding="15dp">
+                    android:layout_margin="15dp">
 
                     <TextView
                         style="@style/blackText25"

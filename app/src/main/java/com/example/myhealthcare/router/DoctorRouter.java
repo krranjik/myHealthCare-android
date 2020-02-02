@@ -10,9 +10,9 @@ import retrofit2.http.Path;
 
 public interface DoctorRouter {
 
-    @GET("getalldoctors")
+    @GET("getalldoctor")
     Call<List<Doctor>> getAllDoctors();
 
-    @GET("getdoctorbyid/{id}")
+    @GET("getdoctorbyids/{id}")
     Call<Doctor> getDoctorById(@Path("id") String id);
 }

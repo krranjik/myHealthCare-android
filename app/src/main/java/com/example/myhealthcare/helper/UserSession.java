@@ -34,12 +34,12 @@ public class UserSession {
         return sharedPreferences.getBoolean(IS_USER_LOGGED_IN, false);
     }
     public String getID(){
-        String id= sharedPreferences.getString(ID,null);
+        String id= sharedPreferences.getString(ID,"");
         return id;
     }
 
     public String getTOKEN(){
-        String token= sharedPreferences.getString(TOKEN,null);
+        String token= sharedPreferences.getString(TOKEN,"");
         return token;
     }
 

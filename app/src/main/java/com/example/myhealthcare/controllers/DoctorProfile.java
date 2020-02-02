@@ -2,19 +2,28 @@ package com.example.myhealthcare.controllers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myhealthcare.R;
 import com.example.myhealthcare.api.DoctorAPI;
+import com.example.myhealthcare.helper.GetImage;
 import com.example.myhealthcare.models.Doctor;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DoctorProfile extends AppCompatActivity {
 
-    TextView name, department, phone, description, location;
+    TextView name, department, phone, description, location, title;
     RatingBar rating;
     String id;
+    CircleImageView imageView;
+    ImageView backbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +36,19 @@ public class DoctorProfile extends AppCompatActivity {
         description = findViewById(R.id.description);
         location = findViewById(R.id.location);
         rating = findViewById(R.id.rating);
+        imageView = findViewById(R.id.doctor_img);
+
+        title = findViewById(R.id.menu_title_holder);
+        title.setText("Doctor Profile");
+
+        backbtn = findViewById(R.id.back);
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DoctorProfile.this, Doctor.class));
+            }
+        });
+
         DoctorAPI doctorAPI = new DoctorAPI();
         id = getIntent().getStringExtra("id");
         System.out.println(id + " as");
@@ -37,7 +59,7 @@ public class DoctorProfile extends AppCompatActivity {
         phone.setText(docDetail.getPhone());
         description.setText(docDetail.getDescription());
         location.setText(docDetail.getLocation());
-//        System.out.println(docDetail.getRating());
-        rating.setNumStars(Integer.parseInt("5"));
+        rating.setRating(Float.parseFloat(docDetail.getRating()));
+        GetImage.setImage(docDetail.getImage(), imageView);
     }
 }

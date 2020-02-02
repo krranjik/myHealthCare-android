@@ -9,7 +9,7 @@ public class Retro {
     private static final String BASE_URL
             = "http://10.0.2.2:4444/";
     public static final String IMG_URL
-            = "http://10.0.2.2:4444/image/";
+            = "http://10.0.2.2:4444/public/";
 
     public static Retrofit getInstance() {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();

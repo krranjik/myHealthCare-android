@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/doctor_img"
+            android:id="@+id/doctor_image"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_centerVertical="true"
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/doctor_img"
+            android:layout_toRightOf="@+id/doctor_image"
             android:orientation="vertical">
 
             <TextView
@@ -70,7 +70,7 @@
             android:orientation="horizontal">
 
             <RatingBar
-                android:id="@+id/rating"
+                android:id="@+id/ratingbar"
                 style="?android:attr/ratingBarStyleIndicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

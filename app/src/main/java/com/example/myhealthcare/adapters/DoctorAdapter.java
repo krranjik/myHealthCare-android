@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myhealthcare.R;
 import com.example.myhealthcare.controllers.DoctorProfile;
+import com.example.myhealthcare.helper.GetImage;
 import com.example.myhealthcare.models.Doctor;
 
 import java.util.List;
@@ -42,6 +44,8 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyHolder> 
         final Doctor doctor = doctorList.get(position);
         holder.name.setText(doctor.getName());
         holder.department.setText(doctor.getDepartment());
+        holder.rating.setRating(Float.parseFloat(doctor.getRating()));
+        GetImage.setImage(doctor.getImage(),holder.doctor_img);
         System.out.println(doctor.getId());
         holder.name.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +65,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyHolder> 
     public class MyHolder extends RecyclerView.ViewHolder {
 
         TextView name, department;
+        RatingBar rating;
         ImageView doctor_img;
 
         public MyHolder(@NonNull View itemView) {
@@ -68,7 +73,8 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyHolder> 
 
             name = itemView.findViewById(R.id.name);
             department = itemView.findViewById(R.id.department);
-            doctor_img = itemView.findViewById(R.id.doctor_img);
+            rating=itemView.findViewById(R.id.ratingbar);
+            doctor_img = itemView.findViewById(R.id.doctor_image);
         }
     }
 }
