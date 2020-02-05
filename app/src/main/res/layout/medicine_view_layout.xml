@@ -13,92 +13,174 @@
         app:cardElevation="10dp">
 
         <RelativeLayout
-            android:id="@+id/medicinename"
+            android:id="@+id/medicinenam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:gravity="center">
 
-            <ImageView
-                android:id="@+id/medicineicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/medicine" />
-
             <TextView
+                android:id="@+id/start"
                 style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/medicineicon"
-                android:layout_marginTop="10dp"
-                android:padding="5dp"
-                android:text="Medicine Name" />
-
-            <ImageView
-                android:id="@+id/sunicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/medicineicon"
-                android:padding="5dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginRight="20dp"
-                android:src="@drawable/sun" />
-
-            <ImageView
-                android:id="@+id/dayicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/medicineicon"
-                android:layout_centerHorizontal="true"
-                android:padding="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_toRightOf="@+id/sunicon"
-                android:src="@drawable/day" />
-
-            <ImageView
-                android:id="@+id/moonicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:layout_below="@id/medicineicon"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="20dp"
-                android:layout_toRightOf="@+id/dayicon"
-                android:src="@drawable/moon" />
+                android:text="Start Date: " />
 
             <TextView
-                android:id="@+id/morntime"
-                style="@style/bluetext15"
+                android:id="@+id/startdate"
+                style="@style/bluetext20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/sunicon"
-                android:layout_centerHorizontal="true"
-                android:layout_marginRight="20dp"
-                android:text="Time" />
+                android:layout_toRightOf="@+id/start"
+                android:text="Start Date" />
 
             <TextView
-                android:id="@+id/daytime"
-                style="@style/bluetext15"
+                android:id="@+id/stop"
+                style="@style/blackText20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/sunicon"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_toRightOf="@+id/morntime"
-                android:text="Time" />
+                android:layout_below="@+id/start"
+                android:text="End Date: " />
 
             <TextView
-                android:id="@+id/nighttime"
-                style="@style/bluetext15"
+                android:id="@+id/stopdate"
+                style="@style/bluetext20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/sunicon"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="20dp"
-                android:layout_toRightOf="@+id/daytime"
-                android:text="Time" />
+                android:layout_below="@+id/start"
+                android:layout_toRightOf="@+id/stop"
+                android:text="Start Date" />
+
+            <LinearLayout
+                android:id="@+id/linearlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stop"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/medicineicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stop"
+                    android:src="@drawable/medicine" />
+
+                <TextView
+                    android:id="@+id/medicinename"
+                    style="@style/blackText20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stop"
+                    android:layout_toRightOf="@id/medicineicon"
+                    android:padding="5dp"
+                    android:text="Medicine Name" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/medlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearlay"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/sunicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/medicineicon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginRight="20dp"
+                        android:padding="5dp"
+                        android:src="@drawable/sun" />
+
+
+                    <TextView
+                        android:id="@+id/morntime"
+                        style="@style/bluetext15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sunicon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginRight="20dp"
+                        android:text="Time" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/dayicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/medicineicon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_toRightOf="@+id/sunicon"
+                        android:padding="5dp"
+                        android:src="@drawable/day" />
+
+                    <TextView
+                        android:id="@+id/daytime"
+                        style="@style/bluetext15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sunicon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_toRightOf="@+id/morntime"
+                        android:text="Time" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/moonicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/medicineicon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/dayicon"
+                        android:padding="5dp"
+                        android:src="@drawable/moon" />
+
+                    <TextView
+                        android:id="@+id/nighttime"
+                        style="@style/bluetext15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sunicon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/daytime"
+                        android:text="Time" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </RelativeLayout>
 

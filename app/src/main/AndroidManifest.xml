@@ -24,7 +24,6 @@
             android:value="@string/map_key" />
 
         <activity android:name="com.android.myhealthcare.controllers.BookAppointment"></activity>
-        <activity android:name="com.android.myhealthcare.controllers.PrescriptionDetail" />
         <activity android:name="com.android.myhealthcare.controllers.DoctorProfile" />
         <activity android:name="com.android.myhealthcare.controllers.Privacy" />
         <activity android:name="com.android.myhealthcare.controllers.TermsAndCondition" />
