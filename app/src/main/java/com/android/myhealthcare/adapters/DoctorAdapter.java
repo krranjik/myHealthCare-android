@@ -10,6 +10,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.myhealthcare.R;
@@ -45,7 +46,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyHolder> 
         holder.rating.setRating(Float.parseFloat(doctor.getRating()));
         GetImage.setImage(doctor.getImage(),holder.doctor_img);
         System.out.println(doctor.getId());
-        holder.name.setOnClickListener(new View.OnClickListener() {
+        holder.cvdoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, DoctorProfile.class);
@@ -65,6 +66,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyHolder> 
         TextView name, department;
         RatingBar rating;
         ImageView doctor_img;
+        CardView cvdoc;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
@@ -73,6 +75,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyHolder> 
             department = itemView.findViewById(R.id.department);
             rating=itemView.findViewById(R.id.ratingbar);
             doctor_img = itemView.findViewById(R.id.doctor_image);
+            cvdoc=itemView.findViewById(R.id.cvdoc);
         }
     }
 }

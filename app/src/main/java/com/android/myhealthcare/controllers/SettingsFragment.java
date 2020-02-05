@@ -21,7 +21,7 @@ import com.android.myhealthcare.helper.UserSession;
 public class SettingsFragment extends Fragment {
 
     View root;
-    CardView cvProfile, cvLogout, cvAbout, cvTAC;
+    CardView cvProfile, cvLogout, cvAbout, cvTAC, cvPrivacy;
     UserSession userSession;
 
 
@@ -68,6 +68,14 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), TermsAndCondition.class));
+            }
+        });
+
+        cvPrivacy = root.findViewById(R.id.cvPrivacy);
+        cvPrivacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Privacy.class));
             }
         });
         return root;

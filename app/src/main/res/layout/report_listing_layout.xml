@@ -1,73 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorWhiteTrans"
-    android:padding="10dp">
+    android:background="@color/colorWhiteTrans">
 
-    <RelativeLayout
-        android:id="@+id/relative"
-        android:layout_margin="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/reporticon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:src="@drawable/report1"/>
-
-        <TextView
-            android:id="@+id/reportname"
-            style="@style/bluetext20"
-            android:layout_toRightOf="@id/reporticon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Report Name" />
-
-        <TextView
-            android:id="@+id/publish"
-            style="@style/blackText20"
-            android:layout_toRightOf="@id/reporticon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/reportname"
-            android:text="Published Date: " />
-
-        <TextView
-            android:id="@+id/publishdate"
-            style="@style/graytext20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/reportname"
-            android:layout_toRightOf="@+id/publish"
-            android:text="Date" />
-
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@+id/relative"
-        android:background="@color/colorLine" />
-
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvdoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:layout_below="@+id/line"
-        android:orientation="horizontal">
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
 
-        <Button
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="View"
-            android:background="@drawable/btnstyle1"
-            style="@style/whitetext20"/>
-    </RelativeLayout>
+            android:background="@color/colorWhite"
+            android:padding="10dp">
 
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/reporticon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/report1" />
+
+                <TextView
+                    android:id="@+id/reportname"
+                    style="@style/bluetext20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/reporticon"
+                    android:text="Report Name" />
+
+                <TextView
+                    android:id="@+id/publish"
+                    style="@style/blackText20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reportname"
+                    android:layout_toRightOf="@id/reporticon"
+                    android:text="Published Date: " />
+
+                <TextView
+                    android:id="@+id/publishdate"
+                    style="@style/graytext20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reportname"
+                    android:layout_toRightOf="@+id/publish"
+                    android:text="Date" />
+
+                <TextView
+                    android:id="@+id/repdoctor"
+                    style="@style/blackText20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/publish"
+                    android:layout_toRightOf="@id/reporticon"
+                    android:text="Supervised By: " />
+
+                <TextView
+                    android:id="@+id/repbydoc"
+                    style="@style/graytext20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/publishdate"
+                    android:layout_toRightOf="@+id/repdoctor"
+                    android:text="Doctor" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative"
+                android:layout_marginLeft="10dp"
+                android:background="@color/colorLine" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/viewreport"
+                    style="@style/whitetext20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btnstyle1"
+                    android:text="View" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>

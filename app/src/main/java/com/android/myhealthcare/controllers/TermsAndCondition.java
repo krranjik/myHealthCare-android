@@ -18,6 +18,6 @@ public class TermsAndCondition extends AppCompatActivity {
 
         pdfTAC = findViewById(R.id.tacpdf);
 
-        pdfTAC.fromAsset("TAC.pdf").load(); 
+        pdfTAC.fromAsset("TAC.pdf").load();
     }
 }

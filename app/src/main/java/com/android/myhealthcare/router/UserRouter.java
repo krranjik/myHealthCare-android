@@ -11,10 +11,10 @@ import retrofit2.http.Path;
 
 public interface UserRouter {
 
-    @POST("registerpatient")
+    @POST("addpatient")
     Call<Void> register(@Body User user);
 
-    @POST("patientlogin")
+    @POST("patientlogin")   
     Call<User> login(@Body User user);
 
     @PUT("updatepatient/{id}")

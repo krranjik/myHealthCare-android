@@ -1,92 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorWhite"
-    android:padding="10dp">
+    android:layout_height="wrap_content">
 
-    <RelativeLayout
-        android:id="@+id/relative"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/doctor_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_centerVertical="true"
-            android:layout_margin="10dp"
-            android:src="@drawable/kritik" />
-
-        <LinearLayout
-            android:id="@+id/layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/doctor_image"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/name"
-                style="@style/blackText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/profile_image"
-                android:text="Name" />
-
-            <TextView
-                android:id="@+id/department"
-                style="@style/graytext20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/name"
-                android:layout_toRightOf="@+id/profile_image"
-                android:text="Department" />
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/relative"
-        android:layout_marginLeft="10dp"
-        android:background="@color/colorLine" />
-
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvdoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/line"
-        android:orientation="horizontal"
-        android:weightSum="4">
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3.5"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:background="@color/colorWhite"
+            android:padding="10dp">
 
-            <RatingBar
-                android:id="@+id/ratingbar"
-                style="?android:attr/ratingBarStyleIndicator"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/doctor_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/kritik" />
+
+                <LinearLayout
+                    android:id="@+id/layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/doctor_image"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name"
+                        style="@style/blackText20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/profile_image"
+                        android:text="Name" />
+
+                    <TextView
+                        android:id="@+id/department"
+                        style="@style/graytext20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:layout_toRightOf="@+id/profile_image"
+                        android:text="Department" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative"
+                android:layout_marginLeft="10dp"
+                android:background="@color/colorLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp" />
+                android:orientation="horizontal"
+                android:weightSum="4">
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_toRightOf="@id/rating"
-            android:layout_weight="0.5"
-            android:src="@drawable/next" />
-    </LinearLayout>
+                    <RatingBar
+                        android:id="@+id/ratingbar"
+                        style="?android:attr/ratingBarStyleIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp" />
 
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_toRightOf="@id/rating"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/next" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>
