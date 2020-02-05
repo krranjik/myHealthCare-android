@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.myhealthcare.R;
@@ -49,7 +50,7 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.MyHolder> 
 
     @Override
     public int getItemCount() {
-        return 0;
+        return reportList.size();
     }
 
 

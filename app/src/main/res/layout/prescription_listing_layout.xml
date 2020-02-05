@@ -1,70 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorWhiteTrans"
-    android:padding="10dp">
+    android:background="@color/colorWhiteTrans">
 
-    <RelativeLayout
-        android:id="@+id/relative"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/presicon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:src="@drawable/prescription1"/>
-
-            <TextView
-                android:id="@+id/prescriptionname"
-                style="@style/bluetext20"
-                android:layout_toRightOf="@id/presicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Prescription Name" />
-
-            <TextView
-                android:id="@+id/presby"
-                style="@style/blackText20"
-                android:layout_toRightOf="@id/presicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/prescriptionname"
-                android:text="Referred By: " />
-
-            <TextView
-                android:id="@+id/department"
-                style="@style/graytext20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/prescriptionname"
-                android:layout_toRightOf="@+id/presby"
-                android:text="Doctor Name " />
-
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@+id/relative"
-        android:background="@color/colorLine" />
-
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvdoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:layout_below="@+id/line"
-        android:orientation="horizontal">
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/next" />
-    </RelativeLayout>
+            android:background="@color/colorWhite"
+            android:padding="10dp">
 
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/presicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/prescription1" />
+
+                <TextView
+                    android:id="@+id/prescriptionname"
+                    style="@style/bluetext20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/presicon"
+                    android:text="Prescription Name" />
+
+                <TextView
+                    android:id="@+id/presby"
+                    style="@style/blackText20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/prescriptionname"
+                    android:layout_toRightOf="@id/presicon"
+                    android:text="Referred By: " />
+
+                <TextView
+                    android:id="@+id/department"
+                    style="@style/graytext20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/prescriptionname"
+                    android:layout_toRightOf="@+id/presby"
+                    android:text="Doctor Name " />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative"
+                android:layout_marginLeft="10dp"
+                android:background="@color/colorLine" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>

@@ -29,7 +29,6 @@
         <activity android:name="com.android.myhealthcare.controllers.Privacy" />
         <activity android:name="com.android.myhealthcare.controllers.TermsAndCondition" />
         <activity android:name="com.android.myhealthcare.controllers.About" />
-        <activity android:name="com.android.myhealthcare.controllers.EditProfile" />
         <activity android:name="com.android.myhealthcare.controllers.Profile" />
         <activity android:name="com.android.myhealthcare.controllers.Doctor" />
         <activity android:name="com.android.myhealthcare.controllers.Report" />

@@ -6,7 +6,7 @@
     android:background="@color/colorWhiteTrans">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvdoc"
+        android:id="@+id/cvrep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"

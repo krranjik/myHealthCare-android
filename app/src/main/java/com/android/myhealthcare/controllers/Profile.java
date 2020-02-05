@@ -57,7 +57,7 @@ public class Profile extends AppCompatActivity {
         userSession = new UserSession(this);
         id = userSession.getID();
 
-        userAPI=new UserAPI();
+        userAPI = new UserAPI();
         User user = userAPI.getPatientDetail(id);
         name.setText(user.getName());
         gender.setText(user.getGender());
@@ -68,12 +68,13 @@ public class Profile extends AppCompatActivity {
         weight.setText(user.getWeight());
         height.setText(user.getHeight());
         phone.setText(user.getPhone());
-        GetImage.setImage(user.getImage(),imageView);
+        GetImage.setImage(user.getImage(), imageView);
 
         editprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Profile.this, EditProfile.class));
+                EditProfileFragment editProfileFragment = new EditProfileFragment();
+                editProfileFragment.show(Profile.this.getSupportFragmentManager(), "123");
             }
         });
     }

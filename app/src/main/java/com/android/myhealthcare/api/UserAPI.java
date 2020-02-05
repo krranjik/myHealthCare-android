@@ -5,6 +5,9 @@ import com.android.myhealthcare.router.UserRouter;
 
 import java.io.IOException;
 
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -63,8 +66,17 @@ public class UserAPI {
         return userDetail;
     }
 
-    public boolean updatePatient(User user) {
-        Call<Void> userCall = userRouter.updatePatient(userDetail.getId(), user);
+    public boolean updatePatient(User user, MultipartBody.Part image) {
+
+        RequestBody name = RequestBody.create(MediaType.parse("text/plain"),user.getName());
+        RequestBody address = RequestBody.create(MediaType.parse("text/plain"),user.getAddress());
+        RequestBody dob = RequestBody.create(MediaType.parse("text/plain"),user.getDob());
+        RequestBody bloodgroup = RequestBody.create(MediaType.parse("text/plain"),user.getBloodgroup());
+        RequestBody weight = RequestBody.create(MediaType.parse("text/plain"),user.getWeight());
+        RequestBody height = RequestBody.create(MediaType.parse("text/plain"),user.getHeight());
+        RequestBody phone = RequestBody.create(MediaType.parse("text/plain"),user.getPhone());
+
+        Call<Void> userCall = userRouter.updatePatient(userDetail.getId(), name,address,dob,bloodgroup,weight,height,phone,image);
         Strict.StrictMode();
         try {
             Response<Void> response = userCall.execute();
