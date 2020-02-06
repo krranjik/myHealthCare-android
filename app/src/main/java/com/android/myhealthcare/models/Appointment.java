@@ -1,14 +1,15 @@
 package com.android.myhealthcare.models;
 
 public class Appointment {
-    String _id, appointment_date, appointment_time;
+    String _id, appoint_date, appoint_time, status;
     User patient_id;
     Doctor doctor_id;
 
-    public Appointment(String _id, String appointment_date, String appointment_time, User patient_id, Doctor doctor_id) {
+    public Appointment(String _id, String appointment_date, String appointment_time, String status, User patient_id, Doctor doctor_id) {
         this._id = _id;
-        this.appointment_date = appointment_date;
-        this.appointment_time = appointment_time;
+        this.appoint_date = appointment_date;
+        this.appoint_time = appointment_time;
+        this.status = status;
         this.patient_id = patient_id;
         this.doctor_id = doctor_id;
     }
@@ -17,12 +18,16 @@ public class Appointment {
         return _id;
     }
 
-    public String getAppointment_date() {
-        return appointment_date;
+    public String getAppoint_date() {
+        return appoint_date;
     }
 
-    public String getAppointment_time() {
-        return appointment_time;
+    public String getAppoint_time() {
+        return appoint_time;
+    }
+
+    public String getStatus() {
+        return status;
     }
 
     public User getPatient_id() {

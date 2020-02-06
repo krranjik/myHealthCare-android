@@ -61,7 +61,7 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (isSignInDetailsValid() && rememberme.isChecked()) {
+                if (isSignInDetailsValid()) {
                     UserAPI userAPI = new UserAPI();
                     uusername = etUsername.getEditText().getText().toString();
                     upassword = etPassword.getEditText().getText().toString();
