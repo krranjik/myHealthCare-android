@@ -18,7 +18,6 @@ import com.android.myhealthcare.helper.UserSession;
 public class Report extends AppCompatActivity {
 
     TextView title;
-    ImageView backbtn;
     RecyclerView rvreport;
     UserSession userSession;
     String id;
@@ -29,15 +28,8 @@ public class Report extends AppCompatActivity {
         setContentView(R.layout.activity_report);
 
         title = findViewById(R.id.menu_title_holder);
-        backbtn = findViewById(R.id.back);
         title.setText("Report");
-        backbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Report.this, Dashboard.class);
-                startActivity(intent);
-            }
-        });
+
         userSession = new UserSession(this);
         id = userSession.getID();
 

@@ -21,7 +21,6 @@ public class Profile extends AppCompatActivity {
 
     TextView name, gender, address, email, dob, bloodgroup, weight, height, phone;
     TextView title;
-    ImageView backbtn;
     CircleImageView imageView;
     Button editprofile;
     UserAPI userAPI;
@@ -35,13 +34,6 @@ public class Profile extends AppCompatActivity {
 
         title = findViewById(R.id.menu_title_holder);
         title.setText("Profile");
-        backbtn = findViewById(R.id.back);
-        backbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Profile.this, SettingsFragment.class));
-            }
-        });
 
         name = findViewById(R.id.pname);
         gender = findViewById(R.id.pgender);

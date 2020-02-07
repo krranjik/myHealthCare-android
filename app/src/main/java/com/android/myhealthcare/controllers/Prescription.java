@@ -18,7 +18,6 @@ import com.android.myhealthcare.helper.UserSession;
 public class Prescription extends AppCompatActivity {
 
     TextView title;
-    ImageView backbtn;
     RecyclerView rvPrescription;
     String id;
     UserSession userSession;
@@ -29,15 +28,7 @@ public class Prescription extends AppCompatActivity {
         setContentView(R.layout.activity_prescription);
 
         title = findViewById(R.id.menu_title_holder);
-        backbtn = findViewById(R.id.back);
         title.setText("Prescription");
-        backbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Prescription.this, Dashboard.class);
-                startActivity(intent);
-            }
-        });
 
         userSession = new UserSession(this);
         id = userSession.getID();

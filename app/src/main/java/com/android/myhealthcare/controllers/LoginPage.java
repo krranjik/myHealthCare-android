@@ -27,7 +27,6 @@ public class LoginPage extends AppCompatActivity {
     TextView forgotpassword, createacc;
     Button btnlogin;
     String uusername, upassword;
-    CheckBox rememberme;
     private UserSession userSession;
 
 
@@ -43,7 +42,6 @@ public class LoginPage extends AppCompatActivity {
         forgotpassword = findViewById(R.id.resetPw);
         createacc = findViewById(R.id.createacc);
         btnlogin = findViewById(R.id.btnlogin);
-        rememberme = findViewById(R.id.rememberMe);
 
         userSession = new UserSession(this);
         if (userSession.isActive()) {

@@ -34,8 +34,6 @@ public class RegistrationPage extends AppCompatActivity implements RadioGroup.On
         registerButton = findViewById(R.id.signup);
         gender.setOnCheckedChangeListener(this);
 
-
-
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

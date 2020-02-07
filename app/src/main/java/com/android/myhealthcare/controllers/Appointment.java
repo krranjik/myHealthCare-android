@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +19,6 @@ import com.android.myhealthcare.helper.UserSession;
 public class Appointment extends AppCompatActivity {
 
     TextView title;
-    ImageView backbtn;
     RecyclerView rvAppoint;
     UserSession userSession;
     String id;
@@ -29,15 +29,8 @@ public class Appointment extends AppCompatActivity {
         setContentView(R.layout.activity_appointment);
 
         title = findViewById(R.id.menu_title_holder);
-        backbtn = findViewById(R.id.back);
         title.setText("Appointment");
-        backbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Appointment.this, Dashboard.class);
-                startActivity(intent);
-            }
-        });
+
         rvAppoint = findViewById(R.id.rv_appointment);
         userSession = new UserSession(this);
         id = userSession.getID();
@@ -47,5 +40,6 @@ public class Appointment extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         rvAppoint.setLayoutManager(layoutManager);
         rvAppoint.setAdapter(appointmentAdapter);
+
     }
 }

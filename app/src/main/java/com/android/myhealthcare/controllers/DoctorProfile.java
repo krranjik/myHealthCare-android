@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -22,7 +23,7 @@ public class DoctorProfile extends AppCompatActivity {
     RatingBar rating;
     String id;
     CircleImageView imageView;
-    ImageView backbtn;
+    Button bookappoint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,18 +41,10 @@ public class DoctorProfile extends AppCompatActivity {
         title = findViewById(R.id.menu_title_holder);
         title.setText("Doctor Profile");
 
-        backbtn = findViewById(R.id.back);
-        backbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DoctorProfile.this, Doctor.class));
-            }
-        });
-
         DoctorAPI doctorAPI = new DoctorAPI();
         id = getIntent().getStringExtra("id");
         System.out.println(id + " as");
-        Doctor docDetail = doctorAPI.getDoctorDetails(id);
+        final Doctor docDetail = doctorAPI.getDoctorDetails(id);
 
         name.setText(docDetail.getName());
         department.setText(docDetail.getDepartment());
@@ -60,5 +53,18 @@ public class DoctorProfile extends AppCompatActivity {
         location.setText(docDetail.getLocation());
         rating.setRating(Float.parseFloat(docDetail.getRating()));
         GetImage.setImage(docDetail.getImage(), imageView);
+
+        bookappoint = findViewById(R.id.bookappointment);
+        bookappoint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("ID",docDetail.getId());
+
+                BookAppointmentFragment bookAppointmentFragment = new BookAppointmentFragment();
+                bookAppointmentFragment.setArguments(bundle);
+                bookAppointmentFragment.show(DoctorProfile.this.getSupportFragmentManager(), "123");
+            }
+        });
     }
 }

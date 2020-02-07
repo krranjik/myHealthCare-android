@@ -100,8 +100,6 @@ public class EditProfileFragment extends DialogFragment {
         GetImage.setImage(user.getImage(), imageView);
 
 
-
-
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,7 +113,7 @@ public class EditProfileFragment extends DialogFragment {
                 );
 
                 UserAPI userAPI = new UserAPI();
-                if (userAPI.updatePatient(user,image)) {
+                if (userAPI.updatePatient(user, image)) {
                     Toast.makeText(getContext(), "Update Successful", Toast.LENGTH_SHORT).show();
                     Notification.givenotification(getContext(), "Profile Updated Successfully");
                     startActivity(new Intent(getContext(), Profile.class));
@@ -132,7 +130,7 @@ public class EditProfileFragment extends DialogFragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode ==1 ){
+        if (requestCode == 1) {
             imageUri = data.getData();
             imageView.setImageURI(imageUri);
             askPermission();
@@ -143,39 +141,35 @@ public class EditProfileFragment extends DialogFragment {
     public void askPermission() {
         if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-        }
-        else {
+        } else {
             getImgReady();
         }
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == 1){
-            if (grantResults.length >0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
+        if (requestCode == 1) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 getImgReady();
-            }
-            else {
+            } else {
                 Toast.makeText(getContext(), "No Permission", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
 
-    private void getImgReady(){
-        String [] filePathColumn = {MediaStore.Images.Media.DATA};
-        Cursor cursor = getContext().getContentResolver().query(imageUri, filePathColumn,null,null,null);
-        assert cursor !=null;
+    private void getImgReady() {
+        String[] filePathColumn = {MediaStore.Images.Media.DATA};
+        Cursor cursor = getContext().getContentResolver().query(imageUri, filePathColumn, null, null, null);
+        assert cursor != null;
         cursor.moveToFirst();
         int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
         String imgPath = cursor.getString(columnIndex);
         System.out.println(imgPath);
         File file = new File(imgPath);
-        RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"),file);
-        image = MultipartBody.Part.createFormData("image",file.getName(),requestBody);
+        RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"), file);
+        image = MultipartBody.Part.createFormData("image", file.getName(), requestBody);
     }
-
-
 
 
 }
