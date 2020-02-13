@@ -24,6 +24,7 @@
             android:transitionName="shared" />
 
         <TextView
+            android:id="@+id/quote"
             style="@style/quote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

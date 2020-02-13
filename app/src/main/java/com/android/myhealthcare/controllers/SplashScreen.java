@@ -27,9 +27,9 @@ public class SplashScreen extends AppCompatActivity {
             w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
 
-        imageView = findViewById(R.id.logo);
+        imageView = findViewById(R.id.splashlogo);
 
-        Animation myAnimation = AnimationUtils.loadAnimation(this, R.anim.timer);
+        Animation myAnimation = AnimationUtils.loadAnimation(this, R.anim.fadeout);
         imageView.startAnimation(myAnimation);
 
         final Intent myIntent = new Intent(this, WelcomeScreen.class);

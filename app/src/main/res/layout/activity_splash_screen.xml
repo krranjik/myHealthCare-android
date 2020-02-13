@@ -9,7 +9,7 @@
     android:transitionName="shared">
 
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/splashlogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

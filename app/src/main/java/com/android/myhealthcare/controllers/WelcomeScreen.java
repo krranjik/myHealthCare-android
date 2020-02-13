@@ -8,13 +8,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.myhealthcare.R;
 
 public class WelcomeScreen extends AppCompatActivity implements View.OnClickListener {
 
-    TextView getStarted;
+    TextView getStarted, quote;
+    ImageView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +29,12 @@ public class WelcomeScreen extends AppCompatActivity implements View.OnClickList
             w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
 
+        quote = findViewById(R.id.quote);
+        logo = findViewById(R.id.logo);
         getStarted = findViewById(R.id.getstarted);
+        getStarted.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fadein));
+        logo.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fadein));
+        quote.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fadein));
         getStarted.setOnClickListener(this);
     }
 
