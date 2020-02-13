@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -73,6 +74,8 @@ public class LoginPage extends AppCompatActivity {
                         startActivity(new Intent(LoginPage.this, Dashboard.class));
                     } else {
                         Toast.makeText(LoginPage.this, "Invalid username or password !", Toast.LENGTH_SHORT).show();
+                        Vibrator vibrator=(Vibrator)getSystemService(VIBRATOR_SERVICE);
+                        vibrator.vibrate(100);
                     }
                 } else {
                     errorMap = new HashMap<>();

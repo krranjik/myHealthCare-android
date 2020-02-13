@@ -7,7 +7,6 @@ import com.android.myhealthcare.models.Doctor;
 import com.android.myhealthcare.models.RequestAppointment;
 import com.android.myhealthcare.models.User;
 
-import org.hamcrest.core.IsNull;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -15,12 +14,9 @@ import org.junit.runners.MethodSorters;
 
 import java.util.List;
 
-import okhttp3.MultipartBody;
-
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThat;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class UnitTest {
