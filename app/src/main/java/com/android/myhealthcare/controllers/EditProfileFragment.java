@@ -27,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.myhealthcare.R;
+import com.android.myhealthcare.api.Strict;
 import com.android.myhealthcare.api.UserAPI;
 import com.android.myhealthcare.helper.GetImage;
 import com.android.myhealthcare.helper.Notification;
@@ -111,7 +112,7 @@ public class EditProfileFragment extends DialogFragment {
                         height.getText().toString(),
                         phone.getText().toString()
                 );
-
+                Strict.StrictMode();
                 UserAPI userAPI = new UserAPI();
                 if (userAPI.updatePatient(user, image)) {
                     Toast.makeText(getContext(), "Update Successful", Toast.LENGTH_SHORT).show();

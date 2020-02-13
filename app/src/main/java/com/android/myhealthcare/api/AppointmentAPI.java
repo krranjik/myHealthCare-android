@@ -20,7 +20,7 @@ public class AppointmentAPI {
     public boolean addAppointments(RequestAppointment appointment) {
 
         Call<Void> callAppointment = appointmentRouter.addAppointment(appointment);
-        Strict.StrictMode();
+
         try {
             Response<Void> regResponse = callAppointment.execute();
             if (regResponse.isSuccessful()) {

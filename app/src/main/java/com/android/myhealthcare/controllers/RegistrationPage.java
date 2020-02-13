@@ -11,6 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.android.myhealthcare.R;
+import com.android.myhealthcare.api.Strict;
 import com.android.myhealthcare.api.UserAPI;
 import com.android.myhealthcare.models.User;
 
@@ -37,17 +38,17 @@ public class RegistrationPage extends AppCompatActivity implements RadioGroup.On
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Strict.StrictMode();
                 UserAPI userAPI = new UserAPI();
                 uname = name.getText().toString();
                 uemail = email.getText().toString();
                 uusername = username.getText().toString();
                 upassword = password.getText().toString();
-                User user = new User(null, uname, uusername, upassword, uemail, "", "", ugender, "", "", "","","");
+                User user = new User(null, uname, uusername, upassword, uemail, "", "", ugender, "", "", "", "", "");
                 if (userAPI.register(user)) {
                     Toast.makeText(RegistrationPage.this, "User has been registered", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(RegistrationPage.this, LoginPage.class));
-                }
-                else{
+                } else {
                     Toast.makeText(RegistrationPage.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
                 }
             }

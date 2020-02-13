@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.myhealthcare.R;
+import com.android.myhealthcare.api.Strict;
 import com.android.myhealthcare.api.UserAPI;
 import com.android.myhealthcare.helper.EditTextValidation;
 import com.android.myhealthcare.helper.UserSession;
@@ -58,6 +59,7 @@ public class LoginPage extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Strict.StrictMode();
 
                 if (isSignInDetailsValid()) {
                     UserAPI userAPI = new UserAPI();

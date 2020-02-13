@@ -22,7 +22,6 @@ public class UserAPI {
     public boolean register(User user) {
 
         Call<Void> callUser = userRouter.register(user);
-        Strict.StrictMode();
         try {
             Response<Void> regResponse = callUser.execute();
             if (regResponse.isSuccessful()) {
@@ -37,7 +36,6 @@ public class UserAPI {
     public boolean login(User user) {
 
         Call<User> callUser = userRouter.login(user);
-        Strict.StrictMode();
         try {
             Response<User> regResponse = callUser.execute();
             if (regResponse.isSuccessful()) {
@@ -77,7 +75,6 @@ public class UserAPI {
         RequestBody phone = RequestBody.create(MediaType.parse("text/plain"),user.getPhone());
 
         Call<Void> userCall = userRouter.updatePatient(userDetail.getId(), name,address,dob,bloodgroup,weight,height,phone,image);
-        Strict.StrictMode();
         try {
             Response<Void> response = userCall.execute();
             if (response.isSuccessful()) {

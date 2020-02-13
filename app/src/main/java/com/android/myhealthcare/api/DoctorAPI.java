@@ -18,7 +18,7 @@ public class DoctorAPI {
     public Doctor getDoctorDetails(String id) {
         System.out.println(id);
         Call<Doctor> doctorCall = doctorRouter.getDoctorById(id);
-        Strict.StrictMode();
+
         try {
             Response<Doctor> response = doctorCall.execute();
             if (response.isSuccessful()) {
@@ -32,7 +32,7 @@ public class DoctorAPI {
 
     public List<Doctor> getAllDoctors() {
         Call<List<Doctor>> doctorList = doctorRouter.getAllDoctors();
-        Strict.StrictMode();
+
         try {
             Response<List<Doctor>> response = doctorList.execute();
             if (response.isSuccessful()) {

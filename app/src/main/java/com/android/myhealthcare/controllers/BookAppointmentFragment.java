@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.android.myhealthcare.R;
 import com.android.myhealthcare.api.AppointmentAPI;
+import com.android.myhealthcare.api.Strict;
 import com.android.myhealthcare.helper.Notification;
 import com.android.myhealthcare.helper.UserSession;
 import com.android.myhealthcare.models.Appointment;
@@ -60,6 +61,7 @@ public class BookAppointmentFragment extends DialogFragment {
         bookbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Strict.StrictMode();
                 RequestAppointment requestAppointment = new RequestAppointment(appointdate, appointtime, doc_id, id);
                 AppointmentAPI appointmentAPI = new AppointmentAPI();
                 if (appointmentAPI.addAppointments(requestAppointment)) {

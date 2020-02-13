@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.android.myhealthcare.R;
 import com.android.myhealthcare.api.DoctorAPI;
+import com.android.myhealthcare.api.Strict;
 import com.android.myhealthcare.helper.GetImage;
 import com.android.myhealthcare.models.Doctor;
 
@@ -58,6 +59,7 @@ public class DoctorProfile extends AppCompatActivity {
         bookappoint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Strict.StrictMode();
                 Bundle bundle = new Bundle();
                 bundle.putString("ID",docDetail.getId());
 

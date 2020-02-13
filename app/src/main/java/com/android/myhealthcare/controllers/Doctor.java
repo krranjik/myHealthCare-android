@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.android.myhealthcare.R;
 import com.android.myhealthcare.adapters.DoctorAdapter;
 import com.android.myhealthcare.api.DoctorAPI;
+import com.android.myhealthcare.api.Strict;
 
 public class Doctor extends AppCompatActivity {
 
@@ -24,7 +25,7 @@ public class Doctor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor);
-
+        Strict.StrictMode();
         rvDoctors = findViewById(R.id.rv_doctors);
         DoctorAPI doctorAPI = new DoctorAPI();
         DoctorAdapter doctorAdapter = new DoctorAdapter(this, doctorAPI.getAllDoctors());
