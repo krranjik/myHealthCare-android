@@ -11,17 +11,52 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3">
+        android:layout_weight="3"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="10dp">
 
+        <TextView
+            android:id="@+id/mhc"
+            style="@style/whitetext20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="myHealth Care"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:layout_below="@+id/mhc"
+            android:padding="5dp"
+            android:text="myHealth Care is a patient management application
+which provides patients all the hospital facility through a mobile application.
+Through this application, patients can view doctors and their reports and prescrtiption
+online and book appointment for checkup.
+"
+            android:textColor="@color/colorWhite"
+            android:textSize="17dp" />
 
     </RelativeLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7"
+        android:layout_weight="4"
+        android:background="@color/colorBlack"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Location of our office:"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp"
+            android:textStyle="bold|italic" />
+
 
         <fragment
             android:id="@+id/map"
@@ -30,4 +65,79 @@
             android:layout_height="match_parent" />
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@color/colorSilver"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/c"
+            style="@style/blackText20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="Contact Us"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/a"
+            style="@style/blackText20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/c"
+            android:padding="5dp"
+            android:text="Address: " />
+
+        <TextView
+            android:id="@+id/ad"
+            style="@style/blackText20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/c"
+            android:layout_toRightOf="@+id/a"
+            android:padding="5dp"
+            android:text="Chagal, Tahachal" />
+
+        <TextView
+            android:id="@+id/e"
+            style="@style/blackText20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/a"
+            android:padding="5dp"
+            android:text="Email: " />
+
+        <TextView
+            android:id="@+id/em"
+            style="@style/graytext20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/a"
+            android:layout_toRightOf="@+id/e"
+            android:padding="5dp"
+            android:text="kritik.ranjit4@gmail.com" />
+
+        <TextView
+            android:id="@+id/p"
+            style="@style/blackText20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/e"
+            android:padding="5dp"
+            android:text="Phone: " />
+
+        <TextView
+            android:id="@+id/ph"
+            style="@style/bluetext20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/e"
+            android:layout_toRightOf="@+id/p"
+            android:padding="5dp"
+            android:text="+977 9860841830" />
+
+    </RelativeLayout>
 </LinearLayout>

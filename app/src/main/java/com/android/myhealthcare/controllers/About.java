@@ -76,8 +76,7 @@ public class About extends FragmentActivity implements OnMapReadyCallback, Googl
         uiSettings.setScrollGesturesEnabled(true);
         map = googleMap;
 
-
-        LatLng mylocation = new LatLng(27.699904, 85.313729);
+        LatLng mylocation = new LatLng(27.704917, 85.299670);
         map.addMarker(new MarkerOptions().position(mylocation).title("myHealth Care"));
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(mylocation, 10F));
         map.setMyLocationEnabled(true);

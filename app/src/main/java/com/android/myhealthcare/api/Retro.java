@@ -8,16 +8,16 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Retro {
 
     //for testing
-    //    private static final String BASE_URL
-//            = "http://192.168.0.101:4444/";
-//    public static final String IMG_URL
-//            = "http://192.168.0.101:4444/public/";
-    //end
-
-    private static final String BASE_URL
-            = "http://10.0.2.2:4444/";
+        private static final String BASE_URL
+            = "http://192.168.1.84:4444/";
     public static final String IMG_URL
-            = "http://10.0.2.2:4444/public/";
+            = "http://192.168.1.84:4444/public/";
+    //end
+//
+//    private static final String BASE_URL
+//            = "http://10.0.2.2:4444/";
+//    public static final String IMG_URL
+//            = "http://10.0.2.2:4444/public/";
 
     public static Retrofit getInstance() {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();

@@ -46,6 +46,5 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test:rules:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.2.0'
-
-
+    implementation 'com.github.bluejamesbond:textjustify-android:2.1.6'
 }

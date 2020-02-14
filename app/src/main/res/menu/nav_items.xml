@@ -7,14 +7,16 @@
         android:checkable="true"
         android:icon="@drawable/home"
         android:title="@string/nav_home" />
-    <item
-        android:id="@+id/nav_notification"
-        android:checkable="true"
-        android:icon="@drawable/notification"
-        android:title="@string/nav_notification" />
+
     <item
         android:id="@+id/nav_settings"
         android:checkable="true"
         android:icon="@drawable/setting"
         android:title="@string/nav_settings" />
+
+    <item
+        android:id="@+id/nav_webview"
+        android:checkable="true"
+        android:icon="@drawable/about"
+        android:title="@string/nav_webview" />
 </menu>

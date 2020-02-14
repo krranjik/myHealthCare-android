@@ -37,7 +37,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     private FrameLayout mMainFrame;
 
     private HomeFragment homeFragment;
-    private NotificationFragment notificationFragment;
+    private WebviewFragment webviewFragment;
     private SettingsFragment settingsFragment;
     SensorManager mySensorManager;
     Sensor myProximitySensor;
@@ -103,7 +103,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         });
 
         homeFragment = new HomeFragment();
-        notificationFragment = new NotificationFragment();
+        webviewFragment = new WebviewFragment();
         settingsFragment = new SettingsFragment();
 
         setFragment(homeFragment);
@@ -116,8 +116,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                         setFragment(homeFragment);
                         return true;
 
-                    case R.id.nav_notification:
-                        setFragment(notificationFragment);
+                    case R.id.nav_webview:
+                        setFragment(webviewFragment);
                         return true;
 
                     case R.id.nav_settings:
@@ -197,6 +197,19 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             case R.id.menu_doctor:
                 Intent intent = new Intent(Dashboard.this, Doctor.class);
                 startActivity(intent);
+                return true;
+        }
+
+        switch (menuItem.getItemId()) {
+            case R.id.menu_logout:
+                userSession.endSession();
+                startActivity(new Intent(Dashboard.this, LoginPage.class));
+                return true;
+        }
+
+        switch (menuItem.getItemId()) {
+            case R.id.menu_about:
+                startActivity(new Intent(Dashboard.this, About.class));
                 return true;
         }
         return false;
