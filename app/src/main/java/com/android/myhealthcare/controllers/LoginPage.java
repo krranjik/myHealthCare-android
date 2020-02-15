@@ -2,7 +2,13 @@ package com.android.myhealthcare.controllers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
@@ -21,6 +27,7 @@ import com.android.myhealthcare.models.User;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class LoginPage extends AppCompatActivity {
     TextInputLayout etUsername, etPassword;
@@ -30,6 +37,11 @@ public class LoginPage extends AppCompatActivity {
     Button btnlogin;
     String uusername, upassword;
     private UserSession userSession;
+
+    SensorManager mSensorManager;
+    private float mAccel;
+    private float mAccelCurrent = SensorManager.GRAVITY_EARTH;
+    private float mAccelLast;
 
 
     @Override
@@ -45,9 +57,19 @@ public class LoginPage extends AppCompatActivity {
         createacc = findViewById(R.id.createacc);
         btnlogin = findViewById(R.id.btnlogin);
 
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Objects.requireNonNull(mSensorManager).registerListener(mSensorListener, mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+                    SensorManager.SENSOR_DELAY_NORMAL);
+        }
+        mAccel = 10f;
+        mAccelCurrent = SensorManager.GRAVITY_EARTH;
+        mAccelLast = SensorManager.GRAVITY_EARTH;
+
         userSession = new UserSession(this);
         if (userSession.isActive()) {
             startActivity(new Intent(LoginPage.this, Dashboard.class));
+            finish();
         }
 
         createacc.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +96,7 @@ public class LoginPage extends AppCompatActivity {
                         startActivity(new Intent(LoginPage.this, Dashboard.class));
                     } else {
                         Toast.makeText(LoginPage.this, "Invalid username or password !", Toast.LENGTH_SHORT).show();
-                        Vibrator vibrator=(Vibrator)getSystemService(VIBRATOR_SERVICE);
+                        Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
                         vibrator.vibrate(100);
                     }
                 } else {
@@ -94,5 +116,42 @@ public class LoginPage extends AppCompatActivity {
         }
         return true;
     }
+
+
+    private final SensorEventListener mSensorListener = new SensorEventListener() {
+        @Override
+        public void onSensorChanged(SensorEvent event) {
+            float x = event.values[0];
+            float y = event.values[1];
+            float z = event.values[2];
+            mAccelLast = mAccelCurrent;
+            mAccelCurrent = (float) Math.sqrt((double) (x * x + y * y + z * z));
+            float delta = mAccelCurrent - mAccelLast;
+            mAccel = mAccel * 0.9f + delta;
+            if (mAccel > 12) {
+                Intent in = new Intent(LoginPage.this, RegistrationPage.class);
+                startActivity(in);
+                finish();
+            }
+        }
+
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        }
+    };
+
+    @Override
+    protected void onResume() {
+        mSensorManager.registerListener(mSensorListener, mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+                SensorManager.SENSOR_DELAY_NORMAL);
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        mSensorManager.unregisterListener(mSensorListener);
+        super.onPause();
+    }
+
 
 }

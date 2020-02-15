@@ -8,24 +8,29 @@
     android:weightSum="10"
     tools:context=".controllers.Appointment">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/menu_toolbar" />
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorBlack"
         android:orientation="horizontal">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.75"
-            android:src="@drawable/doctors" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/back4" />
 
-    </LinearLayout>
+        <TextView
+            style="@style/whitetext30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="APPOINTMENTS"
+            android:textColor="@color/colorBlack" />
+
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

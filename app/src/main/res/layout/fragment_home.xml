@@ -41,8 +41,9 @@
 
             <TextView
                 android:id="@+id/wel"
-                style="@style/whitetext25"
-                android:layout_marginTop="15dp"
+                style="@style/whitetext20"
+                android:textStyle="italic"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/view_month"

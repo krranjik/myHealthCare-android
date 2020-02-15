@@ -2,6 +2,7 @@ package com.android.myhealthcare.controllers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,7 +30,7 @@ public class SplashScreen extends AppCompatActivity {
 
         imageView = findViewById(R.id.splashlogo);
 
-        Animation myAnimation = AnimationUtils.loadAnimation(this, R.anim.fadeout);
+        Animation myAnimation = AnimationUtils.loadAnimation(this, R.anim.translate);
         imageView.startAnimation(myAnimation);
 
         final Intent myIntent = new Intent(this, WelcomeScreen.class);
@@ -37,11 +38,14 @@ public class SplashScreen extends AppCompatActivity {
         Thread thread = new Thread() {
             public void run() {
                 try {
-                    sleep(2000);
+                    sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    startActivity(myIntent);
+
+                    ActivityOptions options =
+                            ActivityOptions.makeCustomAnimation(SplashScreen.this, R.anim.fadein, R.anim.fadeout);
+                    startActivity(myIntent, options.toBundle());
                     finish();
                 }
             }

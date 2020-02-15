@@ -25,6 +25,7 @@ public class UserSession {
         editor.putBoolean(IS_USER_LOGGED_IN, true);
         editor.putString(ID, UserAPI.id);
         editor.putString(TOKEN, UserAPI.token);
+
         editor.commit();
     }
 

@@ -18,7 +18,6 @@ import com.android.myhealthcare.api.Strict;
 
 public class Doctor extends AppCompatActivity {
 
-    TextView title;
     RecyclerView rvDoctors;
 
     @Override
@@ -32,8 +31,5 @@ public class Doctor extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         rvDoctors.setLayoutManager(layoutManager);
         rvDoctors.setAdapter(doctorAdapter);
-
-        title = findViewById(R.id.menu_title_holder);
-        title.setText("Doctor");
     }
 }

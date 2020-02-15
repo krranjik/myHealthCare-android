@@ -17,7 +17,6 @@ import com.android.myhealthcare.helper.UserSession;
 
 public class Prescription extends AppCompatActivity {
 
-    TextView title;
     RecyclerView rvPrescription;
     String id;
     UserSession userSession;
@@ -26,9 +25,6 @@ public class Prescription extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prescription);
-
-        title = findViewById(R.id.menu_title_holder);
-        title.setText("Prescription");
 
         userSession = new UserSession(this);
         id = userSession.getID();

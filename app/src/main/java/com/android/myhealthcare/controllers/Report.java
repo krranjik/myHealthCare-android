@@ -17,7 +17,6 @@ import com.android.myhealthcare.helper.UserSession;
 
 public class Report extends AppCompatActivity {
 
-    TextView title;
     RecyclerView rvreport;
     UserSession userSession;
     String id;
@@ -26,9 +25,6 @@ public class Report extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
-
-        title = findViewById(R.id.menu_title_holder);
-        title.setText("Report");
 
         userSession = new UserSession(this);
         id = userSession.getID();

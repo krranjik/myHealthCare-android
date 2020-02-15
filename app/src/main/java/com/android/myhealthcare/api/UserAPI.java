@@ -57,8 +57,10 @@ public class UserAPI {
             Response<User> response = userCall.execute();
             if (response.isSuccessful()) {
                 userDetail=response.body();
+
             }
         } catch (IOException e) {
+
             e.printStackTrace();
         }
         return userDetail;

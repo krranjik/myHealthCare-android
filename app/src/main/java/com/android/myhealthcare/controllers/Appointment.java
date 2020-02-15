@@ -18,7 +18,6 @@ import com.android.myhealthcare.helper.UserSession;
 
 public class Appointment extends AppCompatActivity {
 
-    TextView title;
     RecyclerView rvAppoint;
     UserSession userSession;
     String id;
@@ -27,9 +26,6 @@ public class Appointment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment);
-
-        title = findViewById(R.id.menu_title_holder);
-        title.setText("Appointment");
 
         rvAppoint = findViewById(R.id.rv_appointment);
         userSession = new UserSession(this);
