@@ -38,5 +38,5 @@ There are basically 4 types of HTTP verbs which is used to interact. They are:
 * DELETE to remove a specific resource (using id)
 
 Retrofit is used as a REST Client for developing this project. It is usually used in java and android as it makes it easy to retrieve and upload JSON or other data via a REST web service. To work with Retrofit, three classes are required: Model, Interface and Retrofit.Builder class. Model is used as a JSON model, Interface is used to define the HTTP operations and Retrofit.Builder is an instance which uses the Builder API and interface which defines URL end point for the HTTP operations. For the Retrofit to work in an android project, certain dependencies have to be added in the build.gradle file. The dependencies are as follows:
-implementation 'com.squareup.retrofit2:retrofit:2.1.0'
-implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+*implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+*implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
