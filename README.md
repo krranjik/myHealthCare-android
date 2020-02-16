@@ -31,6 +31,7 @@ Rest Client is a tool that is used to invoke a REST service API which is exposed
 * a header to allow clients to pass along the request information
 * a path to a resource
 * an optional message body which contains data
+
 There are basically 4 types of HTTP verbs which is used to interact. They are:
 * POST to create a new resource
 * GET to retrieve a collection of resource or a specific resource (i.e. by id)
