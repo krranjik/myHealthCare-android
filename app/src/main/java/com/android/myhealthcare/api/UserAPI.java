@@ -15,9 +15,9 @@ public class UserAPI {
 
     UserRouter userRouter = Retro.getInstance().create(UserRouter.class);
     boolean checkReg, checkLogin, checkUpdate = false;
-    public static User userDetail ;
-    public static String token ;
-    public static String id ;
+    public static User userDetail;
+    public static String token;
+    public static String id;
 
     public boolean register(User user) {
 
@@ -41,8 +41,8 @@ public class UserAPI {
             if (regResponse.isSuccessful()) {
                 checkLogin = true;
                 userDetail = regResponse.body();
-                token=regResponse.body().getToken();
-                id=regResponse.body().get_id();
+                token = regResponse.body().getToken();
+                id = regResponse.body().get_id();
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,7 +56,7 @@ public class UserAPI {
         try {
             Response<User> response = userCall.execute();
             if (response.isSuccessful()) {
-                userDetail=response.body();
+                userDetail = response.body();
 
             }
         } catch (IOException e) {
@@ -68,15 +68,15 @@ public class UserAPI {
 
     public boolean updatePatient(User user, MultipartBody.Part image) {
 
-        RequestBody name = RequestBody.create(MediaType.parse("text/plain"),user.getName());
-        RequestBody address = RequestBody.create(MediaType.parse("text/plain"),user.getAddress());
-        RequestBody dob = RequestBody.create(MediaType.parse("text/plain"),user.getDob());
-        RequestBody bloodgroup = RequestBody.create(MediaType.parse("text/plain"),user.getBloodgroup());
-        RequestBody weight = RequestBody.create(MediaType.parse("text/plain"),user.getWeight());
-        RequestBody height = RequestBody.create(MediaType.parse("text/plain"),user.getHeight());
-        RequestBody phone = RequestBody.create(MediaType.parse("text/plain"),user.getPhone());
+        RequestBody name = RequestBody.create(MediaType.parse("text/plain"), user.getName());
+        RequestBody address = RequestBody.create(MediaType.parse("text/plain"), user.getAddress());
+        RequestBody dob = RequestBody.create(MediaType.parse("text/plain"), user.getDob());
+        RequestBody bloodgroup = RequestBody.create(MediaType.parse("text/plain"), user.getBloodgroup());
+        RequestBody weight = RequestBody.create(MediaType.parse("text/plain"), user.getWeight());
+        RequestBody height = RequestBody.create(MediaType.parse("text/plain"), user.getHeight());
+        RequestBody phone = RequestBody.create(MediaType.parse("text/plain"), user.getPhone());
 
-        Call<Void> userCall = userRouter.updatePatient(userDetail.getId(), name,address,dob,bloodgroup,weight,height,phone,image);
+        Call<Void> userCall = userRouter.updatePatient(userDetail.getId(), name, address, dob, bloodgroup, weight, height, phone, image);
         try {
             Response<Void> response = userCall.execute();
             if (response.isSuccessful()) {
@@ -87,5 +87,5 @@ public class UserAPI {
         }
         return checkUpdate;
     }
-
+    
 }

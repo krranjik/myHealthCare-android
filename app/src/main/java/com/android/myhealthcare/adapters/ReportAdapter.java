@@ -8,10 +8,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.myhealthcare.R;
+import com.android.myhealthcare.controllers.ReportView;
+import com.android.myhealthcare.helper.GetImage;
 import com.android.myhealthcare.models.Report;
 
 import java.util.List;
@@ -43,7 +46,8 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.MyHolder> 
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                ReportView reportView = new ReportView(report.getImage());
+                reportView.show(((AppCompatActivity) context).getSupportFragmentManager(), "123");
             }
         });
     }

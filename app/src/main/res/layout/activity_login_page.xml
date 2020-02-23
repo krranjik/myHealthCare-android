@@ -88,30 +88,26 @@
         android:layout_height="0dp"
         android:layout_weight="2"
         android:weightSum="2"
+        android:gravity="center"
         android:padding="30dp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/resetPw"
+            android:id="@+id/tv"
             style="@style/bluetext20"
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Reset Password" />
+            android:text="Don't have an account?" />
 
-        <View
-            android:layout_width="4dp"
-            android:layout_height="23dp"
-            android:background="@color/colorLine" />
 
         <TextView
             android:id="@+id/createacc"
-            style="@style/bluetext20"
+            style="@style/graytext20"
             android:gravity="center"
+            android:textColor="@color/colorDarkGrey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Create Account" />
 
     </LinearLayout>

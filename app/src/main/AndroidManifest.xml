@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.myhealthcare">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -23,25 +24,27 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_key" />
-        <activity android:name="com.android.myhealthcare.controllers.DoctorProfile" />
-        <activity android:name="com.android.myhealthcare.controllers.Privacy" />
-        <activity android:name="com.android.myhealthcare.controllers.TermsAndCondition" />
-        <activity android:name="com.android.myhealthcare.controllers.About" />
-        <activity android:name="com.android.myhealthcare.controllers.Profile" />
-        <activity android:name="com.android.myhealthcare.controllers.Doctor" />
-        <activity android:name="com.android.myhealthcare.controllers.Report" />
-        <activity android:name="com.android.myhealthcare.controllers.Appointment" />
-        <activity android:name="com.android.myhealthcare.controllers.Prescription" />
-        <activity android:name="com.android.myhealthcare.controllers.Dashboard" />
-        <activity android:name="com.android.myhealthcare.controllers.SplashScreen">
+
+        <activity android:name=".controllers.DoctorProfile" />
+        <activity android:name=".controllers.Privacy" />
+        <activity android:name=".controllers.TermsAndCondition" />
+        <activity android:name=".controllers.About" />
+        <activity android:name=".controllers.Profile" />
+        <activity android:name=".controllers.Doctor" />
+        <activity android:name=".controllers.Report" />
+        <activity android:name=".controllers.Appointment" />
+        <activity android:name=".controllers.Prescription" />
+        <activity android:name=".controllers.Dashboard" />
+        <activity android:name=".controllers.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.android.myhealthcare.controllers.RegistrationPage" />
-        <activity android:name="com.android.myhealthcare.controllers.LoginPage" />
-        <activity android:name="com.android.myhealthcare.controllers.WelcomeScreen" />
+        <activity android:name=".controllers.RegistrationPage" />
+        <activity android:name=".controllers.LoginPage" />
+        <activity android:name=".controllers.WelcomeScreen" />
     </application>
 
 </manifest>

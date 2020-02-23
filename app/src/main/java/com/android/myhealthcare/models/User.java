@@ -25,6 +25,10 @@ public class User {
         this.password = password;
     }
 
+    public User(String password) {
+        this.password = password;
+    }
+
     public User(String name, String address, String dob, String bloodgroup, String weight, String height, String phone) {
         this.name = name;
         this.address = address;

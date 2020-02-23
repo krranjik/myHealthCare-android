@@ -78,6 +78,7 @@ public class SettingsFragment extends Fragment {
                 startActivity(new Intent(getContext(), Privacy.class));
             }
         });
+
         return root;
     }
 }

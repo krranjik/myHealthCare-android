@@ -34,4 +34,7 @@ public interface UserRouter {
 
     @GET("findpatientbyid/{id}")
     Call<User> getPatientByid(@Path("id") String id);
+
+    @PUT("updatepatient/{id}")
+    Call<Void> updatepassword(@Path("id") String id,@Body User user);
 }

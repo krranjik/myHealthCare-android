@@ -33,7 +33,7 @@ public class LoginPage extends AppCompatActivity {
     TextInputLayout etUsername, etPassword;
     EditText username, password;
     private HashMap<String, TextInputLayout> errorMap;
-    TextView forgotpassword, createacc;
+    TextView createacc;
     Button btnlogin;
     String uusername, upassword;
     private UserSession userSession;
@@ -53,7 +53,6 @@ public class LoginPage extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
-        forgotpassword = findViewById(R.id.resetPw);
         createacc = findViewById(R.id.createacc);
         btnlogin = findViewById(R.id.btnlogin);
 
