@@ -9,7 +9,7 @@ myHealth Care is an android application which signifies a patient management app
 * Google Maps integration to show the location of the hospital
 * Wearable module to display notification
 * Shake device to open registration page from login page using ACCELEROMETER sensor
-* Fingerprint sensor implementation to access Appointment Activity
+* Fingerprint sensor implementation to access Dashboard if user login credentials are saved
 * CRUD Functions
 * Edit User Profile
 * Book and Cancel Doctor Appointment
